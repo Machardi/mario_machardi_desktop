@@ -1,0 +1,102 @@
+mixin managers1()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='/personal_admin_account3.html#managers')
+          span.fio=item.fio
+        td
+          =item.dealersNumber
+        td
+          button.basket__good_remove(type='button')
+            b &times;
+
+  form.paa-managers(action='?' method='POST')
+    table.personal-admin-account__table
+      tr
+        th
+          span(sort-table)
+            | ФИО
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='20%')
+          span(sort-table)
+            | Количество дилеров
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='5%')
+          | Удалить
+      +table-tr([{
+        fio: 'Касаткин Валерий Павлович',
+        dealersNumber: '100'
+      }, {
+        fio: 'Галкин Вадим Владимирович',
+        dealersNumber: '10'
+      }, {
+        fio: 'Коровин Наум Дмитриевич',
+        dealersNumber: '1'
+      }, {
+        fio: 'Салазко Валерий Карпович',
+        dealersNumber: '24'
+      }])
+
+    .paa-managers-manager
+      .paa-managers-manager__edit.paa-managers-manager_new-manager
+        .paa-managers-manager__data
+          .paa-managers-manager__data-row-edit.paa-managers-manager__data-row-edit_offset-bottom
+            .paa-managers-manager__data-label
+              | ФИО
+            .paa-managers-manager__data-edit
+              input(type='text' value='')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Телефон
+            .paa-managers-manager__data-edit
+              input(type='text' value='')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | E-mail
+            .paa-managers-manager__data-edit
+              input(type='text' value='')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Домашний адрес
+            .paa-managers-manager__data-edit
+              input(type='text' value='')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Дополнительная информация
+            .paa-managers-manager__data-edit
+              textarea(name='additional-info')
+          .paa-managers-manager__data-row-edit.paa-managers-manager__data-row-edit_offset-top
+            .paa-managers-manager__data-label
+              | Фотография
+            .paa-managers-manager__data-edit
+              .personal-admin-account__file-choose
+                input.personal-admin-account__file-choose_file(type='file')
+                input.personal-admin-account__file-choose_field(type='text')
+                button.personal-admin-account__file-choose_btn.btn.btn_theme_black.btn_size_s(type='button')
+                  | Обзор
+          .paa-managers-manager__data-row-edit.paa-managers-manager__data-row-edit_offset-top
+            .paa-managers-manager__data-label
+              | Логин
+            .paa-managers-manager__data-edit
+              input(type='text' value='')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Пароль
+            .paa-managers-manager__data-edit
+              input(type='password' value='')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Подтверждение пароля
+            .paa-managers-manager__data-edit
+              input(type='password' value='')
+
+    .distribution__row.personal-area__submit
+        button.btn.btn_theme_black.btn_size_m(type='button' new-manager)
+          | Добавить менеджера
+        button.btn.btn_theme_black.btn_size_m(type='button' add-manager)
+          | Добавить
+        button.btn.btn_theme_black.btn_size_m(type='button' cancel-add-manager)
+          | Отменить

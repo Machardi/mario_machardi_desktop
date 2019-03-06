@@ -1,0 +1,264 @@
+mixin sizeCheckbox(checkboxes)
+  .catalog-items__popup_sizes.clearfix
+    each item in checkboxes
+      .catalog-items__popup_sizes_item
+        label.catalog-items__popup_sizes_label
+          input(type='checkbox' name='size' value=item.name)
+          span.catalog-items__popup_sizes_checkbox= item.name
+
+mixin gridsCheckbox(checkboxes)
+  .catalog-items__popup_grids.clearfix
+    each item in checkboxes
+      .catalog-items__popup_grids_item
+        label.catalog-items__popup_grids_label
+          input(type='checkbox' name='size' value=item.name)
+          span.catalog-items__popup_grids_checkbox= item.name
+
+mixin catalogItems(options)
+  .catalog-items__items.clearfix
+    each item in options.items
+      .catalog-items__items_item(item-id=item.slider_id)
+        .catalog-items__items_image.no-print
+          .catalog-items__popup_slider-preview
+            .catalog-items__popup_slider-preview_item(data-thumb=item.image)
+              a(href='product.html')
+                img(src=item.image)
+                !=item.stock
+            .catalog-items__popup_slider-preview_item(data-thumb='uploads/img_3.jpg')
+              a(href='product.html')
+                img(src='uploads/img_3.jpg')
+            .catalog-items__popup_slider-preview_item(data-thumb='uploads/img_4.jpg')
+              a(href='product.html')
+                img(src='uploads/img_4.jpg')
+            .catalog-items__popup_slider-preview_item(data-thumb='uploads/img_5.jpg')
+              a(href='product.html')
+                img(src='uploads/img_5.jpg')
+            .catalog-items__popup_slider-preview_item(data-thumb='uploads/img_6.jpg')
+              a(href='product.html')
+                img(src='uploads/img_6.jpg')
+            .catalog-items__popup_slider-preview_item(data-thumb='uploads/img_7.jpg')
+              a(href='product.html')
+                img(src='uploads/img_7.jpg')
+        .catalog-items__items_title= item.title
+        .catalog-items__items_price= item.price
+          span.rub q
+        form.catalog-items__popup.no-print(action='?' method='POST')
+          .catalog-items__popup_top-buttons
+            // Если товар добавлен в избранное, то вместо класса 'icons__like'
+            // нужно ставить 'icons__like-active'
+            // самой кнопке нужно добавлять класс 'favorite-product'
+            button.catalog-items__popup_like(type='button')
+              .icons.icons__like
+            button.catalog-items__popup_print(type='button' print='.catalog-items__items_item[item-id=' + item.slider_id + ']')
+              .icons.icons__print
+          a.catalog-items__items_title(href='product.html')= item.title
+          if (!item.new_price)
+            .catalog-items__items_price= item.price
+              span.rub q
+          if (item.new_price)
+            .catalog-items__items_old-new-price
+              .catalog-items__items_old-new-price_old= item.price
+                span.rub q
+              .catalog-items__items_old-new-price_new= item.new_price
+                span.rub q
+          .catalog-items__popup_tabs
+            ul.catalog-items__popup_tabs_tabs.clearfix(role='tablist')
+              li.catalog-items__popup_tabs_tab.active
+                a.catalog-items__popup_tabs_link(href='#sizes-' + item.slider_id
+                aria-controls='sizes-' + item.slider_id
+                role='tab' data-toggle='tab')
+                  | Размеры
+              li.catalog-items__popup_tabs_tab
+                a.catalog-items__popup_tabs_link(href='#grids-' + item.slider_id
+                aria-controls='grids-' + item.slider_id
+                role='tab' data-toggle='tab')
+                  | Сетки
+            .catalog-items__popup_tabs_panels
+              .catalog-items__popup_tabs_tabpanel.active(role='tabpanel' id='sizes-' + item.slider_id)
+                +sizeCheckbox([{
+                  name: 'XS'
+                }, {
+                  name: 'S'
+                }, {
+                  name: 'L'
+                }, {
+                  name: 'M'
+                }, {
+                  name: 'XL'
+                }, {
+                  name: '2XL'
+                }, {
+                  name: '3XL'
+                }, {
+                  name: '38'
+                }, {
+                  name: '39'
+                }, {
+                  name: '40'
+                }, {
+                  name: '41'
+                }, {
+                  name: '42'
+                }, {
+                  name: '43'
+                }, {
+                  name: '44'
+                }])
+              .catalog-items__popup_tabs_tabpanel(role='tabpanel' id='grids-' + item.slider_id)
+                +gridsCheckbox([{
+                  name: 'SF1-12'
+                }, {
+                  name: 'SF1-11'
+                }, {
+                  name: 'SF1-10'
+                }, {
+                  name: 'SF1-12'
+                }, {
+                  name: 'SF1-11'
+                }, {
+                  name: 'SF1-10'
+                }, {
+                  name: 'SF1-12'
+                }, {
+                  name: 'SF1-11'
+                }, {
+                  name: 'SF1-10'
+                }])
+          .catalog-items__popup_add-basket
+            button.btn.btn_theme_black.btn_size_m(type='button' data-popup="#add-basket")
+              | В корзину
+
+
+mixin catalog-items()
+  .catalog-items
+    .catalog-items__title.global-blocks-title
+      span.global-blocks-title_text
+        | Найдено
+    .catalog-items__wrapper
+      +catalogItems({
+        items: [{
+          image: 'http://machardi.sidorok9.bget.ru/upload/resize_cache/iblock/41d/111_168_14e0e1c7eb8409a91de7bcfcefa7d6959/41d06345ea32d24c0f44a353ccfe5089.JPG',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 1,
+          new_price: 2990
+        }, {
+          image: 'uploads/img_3.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 2
+        }, {
+          image: 'http://machardi.sidorok9.bget.ru/upload/resize_cache/iblock/41d/111_168_14e0e1c7eb8409a91de7bcfcefa7d6959/41d06345ea32d24c0f44a353ccfe5089.JPG',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 3
+        }, {
+          image: 'uploads/img_5.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 4
+        }, {
+          image: 'uploads/img_6.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 5,
+          stock: '<span class="stock new">New</span>'
+        }, {
+          image: 'uploads/img_7.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 6
+        }]
+      })
+      +catalogItems({
+        items: [{
+          image: 'uploads/img_2.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 7
+        }, {
+          image: 'uploads/img_3.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 8
+        }, {
+          image: 'uploads/img_4.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 9
+        }, {
+          image: 'uploads/img_5.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 10,
+          stock: '<span class="stock sale">Sale</span>'
+        }, {
+          image: 'uploads/img_6.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 11
+        }, {
+          image: 'uploads/img_7.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 12
+        }]
+      })
+      +catalogItems({
+        items: [{
+          image: 'uploads/img_2.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 13
+        }, {
+          image: 'uploads/img_3.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 14
+        }, {
+          image: 'uploads/img_4.jpg',
+          title: 'Non Iron | SFEL122kom',
+          price: 3990,
+          slider_id: 15,
+          stock: '<span class="stock">Акция</span>'
+        }]
+      })
+    .catalog-items__more
+      a.catalog-items__more_link(href='#')
+        | Ещё ...
+
+    .catalog-items__about-brand
+      .catalog-items__about-brand_title
+        span.catalog-items__about-brand_title_text Сорочки Mario Machardi
+      .catalog-items__about-brand_wrapper.clearfix
+        .catalog-items__about-brand_column
+          h3
+            | Стильные, модные мужские рубашки от производителя из Италии, компании «Mario Machardi» — лучшее из возможных предложений текущего сезона.
+          p
+            | «Mario Machardi» — один из ведущих производителей изысканных мужских рубашек, галстуков и аксессуаров. Российские потребители прекрасно знают эту торговую марку и доверяют ей, поскольку «Mario Machardi» успешно работает на российском рынке c 1992 года. Любой модный аксессуар из каталога компании становится открытием и во многом определяет тренд в мужской моде текущего сезона.
+          p: b
+            | Мужские рубашки оптом
+          p
+            | Мужские сорочки традиционно занимают особое место в коллекциях «Mario Machardi», особенно белые.
+        .catalog-items__about-brand_column
+          p
+            | Компания «Mario Machardi» разработала одну из лучших схем оптовых поставок. Мужские сорочки оптом от производителя поставляются в каждый регион мира особыми партиями, в которых учтены специфические особенности фигуры среднего мужчины.
+          p
+            | В результате оптовые партии рубашек очень хорошо раскупаются в розничной торговле, что способствует повышению прибылей оптовых потребителей. Соответственно, продукция бренда имеет репутацию высоколиквидного товара, что повышает взаимную выгоду от сотрудничества.
+          p
+            | Мужские рубашки оптом от производителя — всегда беспроигрышный вариант: прямые торговые отношения и отсутствие посредников гарантируют наилучшую цену. Кроме того, компания гарантирует оптовым покупателям существенные скидки, бонусы и участие в программе лояльности.
+        .catalog-items__about-brand_column
+          P: b
+            | Мужские рубашки «Mario Machardi» популярны по нескольким причинам:
+          ul
+            li
+              | Высокое качество тканей, с особой тщательностью отбираемых у лучших мировых производителей.
+            li
+              | Внимание модельеров к каждой, даже самой мелкой детали.
+            li
+              | Соответствие каждой коллекции последним европейским модным тенденциям.
+            li
+              | При разработке лекал — обязательные поправки на особенности фигуры среднего представителя мужского населения региона поставки.
+            li
+              | Демократичная стоимость.
+

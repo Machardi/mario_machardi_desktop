@@ -1,0 +1,53 @@
+mixin registration-requests1()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='/personal_admin_account3.html')
+          span.name=item.name
+          br
+          =item.description
+        td
+          =item.requestNumber
+        td
+          =item.requestDate
+
+  .paa-registration-requests
+    table.personal-admin-account__table
+      tr
+        th
+          span(sort-table)
+            | Клиент
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='12%')
+          span(sort-table)
+            | Номер заявки
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='12%')
+          span(sort-table)
+            | Дата заявки
+            =' '
+            i.fa.fa-angle-down.no-print
+      +table-tr([{
+        name: 'Телингатер Соломон Бенедиктович',
+        description: 'ООО Пегас',
+        requestNumber: '0000001',
+        requestDate: '10.02.2017'
+      }, {
+        name: 'Лазурский Вадим Владимирович',
+        description: 'ООО Лигатура',
+        requestNumber: '0000002',
+        requestDate: '10.02.2017'
+      }, {
+        name: 'Короленко Лариса Дмитриевна',
+        description: 'ИП Ласточка',
+        requestNumber: '0000003',
+        requestDate: '10.02.2017'
+      }, {
+        name: 'Ким Валерий Карпович',
+        description: 'ООО Восток',
+        requestNumber: '0000004',
+        requestDate: '09.02.2017'
+      }])

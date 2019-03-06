@@ -1,0 +1,39 @@
+.breadcrumbs
+  display block
+  position relative
+  z-index 1
+
+  &__back
+    display inline-block
+    margin -1px 15px 0 0
+    vertical-align middle
+
+    &_link
+      transition opacity 0.15s ease-out
+
+      &:hover
+        opacity 0.5
+
+  &__item
+    display inline-block
+    vertical-align middle
+
+    &:after
+      content '/'
+      color #878787
+      font-size 12px
+      font-weight 100
+      margin-left 4px
+
+    &:last-child
+      &:after
+        display none
+
+  &__link
+    color #878787
+    font-size 14px
+    font-weight 100
+
+  a&__link
+    &:hover
+      text-decoration underline

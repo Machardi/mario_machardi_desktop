@@ -1,0 +1,97 @@
+mixin viewedSliderItems(items)
+  .catalog-right-panel__viewed-slider.catalog-right-panel__viewed-slider_open(viewed-slider)
+    each item in items
+      .catalog-right-panel__slider_item
+        a.catalog-right-panel__slider_item_wrapper(href='#')
+          .catalog-right-panel__slider_image
+            img(src=item.image alt=item.title)
+          .catalog-right-panel__slider_title= item.title
+          .catalog-right-panel__slider_price= item.price
+            span.rub q
+        .catalog-right-panel__slider_option-button
+          // Если товар добавлен в избранное, то вместо класса 'icons__like'
+          // нужно ставить 'icons__like-active'
+          // самой кнопке нужно добавлять класс 'favorite-product'
+          button.catalog-right-panel__slider_like(type='button')
+            .icons.icons__like
+          button.catalog-right-panel__slider_basket(type='button')
+            .icons.icons__basket-middle
+
+mixin wishlistSliderItems(items)
+  .catalog-right-panel__wishlist-slider(wishlist-slider)
+    each item in items
+      .catalog-right-panel__slider_item
+        a.catalog-right-panel__slider_item_wrapper(href='#')
+          .catalog-right-panel__slider_image
+            img(src=item.image alt=item.title)
+          .catalog-right-panel__slider_title= item.title
+          .catalog-right-panel__slider_price= item.price
+            span.rub q
+        .catalog-right-panel__slider_option-button
+          // Если товар добавлен в избранное, то вместо класса 'icons__like'
+          // нужно ставить 'icons__like-active'
+          // самой кнопке нужно добавлять класс 'favorite-product'
+          button.catalog-right-panel__slider_like.favorite-product(type='button')
+            .icons.icons__like-active
+          button.catalog-right-panel__slider_basket(type='button')
+            .icons.icons__basket-middle
+
+mixin catalog-right-panel()
+  .catalog-right-panel
+
+    .catalog-right-panel__close-wrapper
+      button.catalog-right-panel__open-panel-btn(type='button' open-panel)
+        .icons.icons__left-black-arrow
+
+    .catalog-right-panel__open-wrapper.nano
+      .catalog-right-panel__open-wrapper-scroll.nano-content
+        .catalog-right-panel__open-wrapper-btn
+          button.catalog-right-panel__close-panel-btn(type='button' close-panel)
+            | &times;
+        .catalog-right-panel__content-wrapper
+          .catalog-right-panel__list
+            .catalog-right-panel__list_item
+              a.catalog-right-panel__list_link(href='#')
+                .catalog-right-panel__list_icon
+                  .icons.icons__my-order
+                  .catalog-right-panel__my-order_count 12
+                | Мои заказы
+            .catalog-right-panel__list_item
+              a.catalog-right-panel__list_link(href='#')
+                .catalog-right-panel__list_icon
+                  .icons.icons__viewed
+                | Просмотренно
+            .catalog-right-panel__list_item
+              a.catalog-right-panel__list_link(href='#')
+                .catalog-right-panel__list_icon
+                  .icons.icons__basket-middle
+                | Моя корзина
+            .catalog-right-panel__list_item
+              a.catalog-right-panel__list_link(href='#' wishlist-slider-btn)
+                .catalog-right-panel__list_icon
+                  .icons.icons__like
+                | Wishlist
+
+          +viewedSliderItems([{
+            title: 'Easy Care | SF28004',
+            image: 'uploads/img_2.jpg',
+            price: '3990'
+          }])
+
+          +wishlistSliderItems([{
+            title: 'Easy Care | SF28004',
+            image: 'uploads/img_3.jpg',
+            price: '3990'
+          }, {
+            title: 'Easy Care | SF28004',
+            image: 'uploads/img_4.jpg',
+            price: '3990'
+          }, {
+            title: 'Easy Care | SF28004',
+            image: 'uploads/img_5.jpg',
+            price: '3990'
+          }, {
+            title: 'Easy Care | SF28004',
+            image: 'uploads/img_6.jpg',
+            price: '3990'
+          }])

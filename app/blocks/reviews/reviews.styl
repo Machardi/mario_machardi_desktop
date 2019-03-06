@@ -1,0 +1,91 @@
+.reviews
+  margin-top 30px
+
+  &__item
+    float left
+    height 100%
+    padding 2px
+
+    &_large
+      width (100 - (100 / 3))%
+
+    &_medium
+      width (100 / 3)%
+
+    &_small
+      width (100 / 3)%
+
+    &_wrapper
+      background-color #f1f4f8
+      height 100%
+      padding 40px 60px (40 + 50)px
+      position relative
+
+    &_review-text
+      & p
+        font-weight 100
+        margin 0 0 20px
+
+      &_large
+        & p
+          font-size 44px
+          line-height 61px
+
+      &_medium
+        & p
+          font-size 32px
+          line-height 46px
+
+      &_small
+        & p
+          font-size 24px
+          line-height 38px
+
+    &_review-author
+      bottom 0
+      font-size 18px
+      font-weight 700
+      height 90px
+      left 0
+      position absolute
+      text-align right
+      width 100%
+
+      & span
+        bottom 0
+        display inline-block
+        padding 0 40px 40px
+        position absolute
+        right 0
+        text-align left
+
+  &__more-reviews
+    margin-top 40px
+    position relative
+
+    &:after
+      background-color #f0f0f0
+      bottom 0
+      content ''
+      height 1px
+      left 0
+      margin auto 0
+      position absolute
+      top 0
+      width 100%
+
+    &_button
+      background-color white
+      color black
+      display block
+      font-size 18px
+      font-weight 700
+      padding 10px 0
+      margin 0 auto
+      position relative
+      text-align center
+      width 270px
+      z-index 1
+
+      &:hover
+        text-decoration underline

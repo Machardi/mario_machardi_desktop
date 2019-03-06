@@ -1,0 +1,56 @@
+{
+  "name": "pr-template",
+  "version": "0.0.1",
+  "description": "A template for a quick start.",
+  "license": "MIT",
+  "dependencies": {
+    "es5-shim": "latest",
+    "event-shim.js": "latest",
+    "html5shiv": "latest",
+    "css3-mediaqueries-js": "latest",
+    "jquery": "^2.2.3",
+    "bootstrap": "^3.3.6",
+    "jquery-form-validator": "^2.3.26",
+    "slick-carousel": "^1.6.0",
+    "lightbox2": "^2.8.2",
+    "chosen": "^1.6.1",
+    "fotorama": "^4.6.4",
+    "jquery-zoom": "^1.7.15",
+    "nanoscroller": "^0.8.7",
+    "jQuery.print": "^1.4.1"
+  },
+  "overrides": {
+    "jquery": {
+      "main": [
+        "./dist/jquery.js"
+      ]
+    },
+    "bootstrap": {
+      "main": [
+        "./dist/css/bootstrap.css",
+        "./dist/css/bootstrap.css.map",
+        "./dist/js/bootstrap.js"
+      ]
+    },
+    "jquery-form-validator": {
+      "main": [
+        "./form-validator/jquery.form-validator.js",
+        "./src//modules/security.js"
+      ]
+    },
+    "lightbox2": {
+      "main": [
+        "./dist/js/lightbox.js",
+        "./dist/css/lightbox.css"
+      ]
+    },
+    "fotorama": {
+      "main": [
+        "./fotorama.css",
+        "./fotorama.js",
+        "./fotorama.png",
+        "./fotorama@2x.png"
+      ]
+    }
+  }
+}

@@ -1,0 +1,161 @@
+mixin payment-profile()
+  .personal-area-payment-profile
+    .basket__personal-data.clearfix(current-profile)
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | Выберите профиль оплаты
+          select.basket__select-control(name='your_profile')
+            option(value='solomakin') solomakin
+            option(value='solomakin_2') solomakin 2
+        .basket__row
+          label.basket__label
+            | Название компании*
+          .basket__row_text Саламандра
+
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | Фамилия*
+          .basket__row_text Соломакин
+        .basket__row
+          label.basket__label
+            | Имя*
+          .basket__row_text Алексей
+        .basket__row
+          label.basket__label
+            | Отчество*
+          .basket__row_text Юрьевич
+
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | E-mail*
+          .basket__row_text solomakin@mail.ru
+        .basket__row
+          label.basket__label
+            | Дополнительный e-mail
+          .basket__row_text solo@mail.ru
+        .basket__row
+          label.basket__label
+            | Телефон
+          .basket__row_text +7 (916) 386-54-45
+        .basket__row
+          label.basket__label
+            | Дополнительный телефон
+          .basket__row_text +7 (916) 386-54-44
+
+    form.basket__personal-data.clearfix(action='?' method='POST' style='display: none;'
+    change-current-profile)
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | Выберите профиль оплаты
+          select.basket__select-control(name='your_profile')
+            option(value='solomakin') solomakin
+            option(value='solomakin_2') solomakin 2
+        .basket__row
+          label.basket__label
+            | Название компании*
+          input.basket__input-control(type='text' name='company_name' data-validation='required'
+          value='Саламандра')
+
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | Фамилия*
+          input.basket__input-control(type='text' name='last_name' data-validation='required'
+          value='Соломакин')
+        .basket__row
+          label.basket__label
+            | Имя*
+          input.basket__input-control(type='text' name='first_name' data-validation='required'
+          value='Алексей')
+        .basket__row
+          label.basket__label
+            | Отчество*
+          input.basket__input-control(type='text' name='middle_name' data-validation='required'
+          value='Юрьевич')
+
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | E-mail*
+          input.basket__input-control(type='text' name='email' data-validation='email required'
+          value='solomakin@mail.ru')
+        .basket__row
+          label.basket__label
+            | Дополнительный e-mail
+          input.basket__input-control(type='text' name='additional_email' data-validation='email'
+          data-validation-optional='true' value='solo@mail.ru')
+        .basket__row
+          label.basket__label
+            | Телефон
+          input.basket__input-control(type='text' name='phone' data-validation='length number'
+          data-validation-length='10-11' data-validation-ignore='+' data-validation-optional='true'
+          value='+7 (916) 386-54-45')
+        .basket__row
+          label.basket__label
+            | Дополнительный телефон
+          input.basket__input-control(type='text' name='additional_phone'
+          data-validation='length number' data-validation-length='10-11' data-validation-ignore='+'
+          data-validation-optional='true' value='+7 (916) 386-54-44')
+
+    form.basket__personal-data.clearfix(action='?' method='POST' style='display: none;'
+    create-new-profile-form)
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | Имя нового профиля оплаты*
+          input.basket__input-control(type='text' name='your_profile' data-validation='required')
+        .basket__row
+          label.basket__label
+            | Название компании*
+          input.basket__input-control(type='text' name='company_name' data-validation='required')
+
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | Фамилия*
+          input.basket__input-control(type='text' name='last_name' data-validation='required')
+        .basket__row
+          label.basket__label
+            | Имя*
+          input.basket__input-control(type='text' name='first_name' data-validation='required')
+        .basket__row
+          label.basket__label
+            | Отчество*
+          input.basket__input-control(type='text' name='middle_name' data-validation='required')
+
+      .basket__personal-data_column
+        .basket__row
+          label.basket__label
+            | E-mail*
+          input.basket__input-control(type='text' name='email' data-validation='email required')
+        .basket__row
+          label.basket__label
+            | Дополнительный e-mail
+          input.basket__input-control(type='text' name='additional_email' data-validation='email'
+          data-validation-optional='true')
+        .basket__row
+          label.basket__label
+            | Телефон
+          input.basket__input-control(type='text' name='phone' data-validation='length number'
+          data-validation-length='10-11' data-validation-ignore='+' data-validation-optional='true')
+        .basket__row
+          label.basket__label
+            | Дополнительный телефон
+          input.basket__input-control(type='text' name='additional_phone'
+          data-validation='length number' data-validation-length='10-11' data-validation-ignore='+'
+          data-validation-optional='true')
+
+
+    .personal-area__submit
+      button.btn.btn_theme_black.btn_size_m(type='submit' disabled='disabled' save-profile)
+        | Сохранить
+      button.btn.btn_theme_black.btn_size_m(type='button' style='display: none;' cancel-form)
+        | Отменить
+      button.btn.btn_theme_black.btn_size_m(type='button' change-profile)
+        | Изменить
+      button.btn.btn_theme_black.btn_size_m(type='button' create-new-profile)
+        | Создать новый профиль

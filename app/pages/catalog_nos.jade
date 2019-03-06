@@ -1,0 +1,23 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/catalog-nos/catalog-nos
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Каталог NOS';
+  - var pageId = 'catalog-nos';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +breadcrumbs({
+      current_page: 'Каталог NOS'
+    })
+    +catalog-nos()
+    +footer()

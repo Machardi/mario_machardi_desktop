@@ -1,0 +1,73 @@
+.topmenu-sticky
+  background-color white
+  height 60px
+  left -999px
+  margin 0 auto
+  min-width 1280px
+  max-width 1440px
+  padding 0
+  position fixed
+  right -999px
+  top -60px
+  width 100%
+  transition top 0.15s ease-out, visibility 0.15s ease-out
+  visibility hidden
+  z-index 10
+  transform translateZ(0)
+
+  +below(1440px)
+    max-width 1440px
+    padding 0 20px
+
+  &_open
+    visibility visible
+    top 0
+
+  &__logo
+    bottom 0
+    left 20px
+    margin auto 0
+    retinaSprite($logo_small_group)
+    position absolute
+    top 0
+
+  &__menu
+    text-align center
+
+    &_item
+      display inline-block
+      margin-left -5px
+
+    &_link
+      color black
+      display block
+      font-size 18px
+      font-weight 100
+      line-height 22px
+      padding 19px 15px
+      transition color 0.15s ease-out
+
+      &:hover
+        color #d10909
+
+  &__right-menu
+    bottom 0
+    margin auto 0
+    padding 17px 0
+    position absolute
+    right 20px
+    top 0
+
+  &__basket
+    cursor pointer
+    display inline-block
+    vertical-align middle
+
+    & .icons
+      margin-right 5px
+
+  &__phone
+    cursor pointer
+    display inline-block
+    margin-left 10px
+    vertical-align middle

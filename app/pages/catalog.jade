@@ -1,0 +1,29 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/catalog-right-panel/catalog-right-panel
+include ../blocks/catalog-filter/catalog-filter
+include ../blocks/catalog-items/catalog-items
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Каталог';
+  - var pageId = 'catalog';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu(true)
+    +topmenu-sticky()
+    +breadcrumbs({
+      back_button: true,
+      parent_page_1: 'Продукция',
+      current_page: 'Сорочки'
+    })
+    +catalog-right-panel()
+    +catalog-filter()
+    +catalog-items()
+    +footer()

@@ -1,0 +1,42 @@
+.page
+  font-family $museo
+  color black
+  font-size 15px
+  //min-width 990px
+  min-width 1280px
+  //min-width 1400px
+
+  &__wrapper
+    margin 0 auto
+    padding 0
+    max-width 1400px
+
+    +below(1440px)
+      max-width 1440px
+      padding 0 20px
+
+  & .has-error .checkbox,
+  & .has-error .checkbox-inline,
+  & .has-error .control-label,
+  & .has-error .form-control-feedback,
+  & .has-error .help-block,
+  & .has-error .radio,
+  & .has-error .radio-inline,
+  & .has-error.checkbox label,
+  & .has-error.checkbox-inline label,
+  & .has-error.radio label,
+  & .has-error.radio-inline label
+    color #f55a4a
+    font-size 11px
+    font-weight 300
+
+  & .rub
+    font-family $rubl
+
+  @media print
+    &
+      min-width 1090px
+
+  // This value should be just higher than your other elements' z-indexes
+  & .loadingoverlay
+    z-index 9999

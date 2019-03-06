@@ -1,0 +1,146 @@
+mixin distribution2()
+  .distribution
+    form(action='?' method='POST')
+      .distribution__row.subscribe
+        .distribution__title
+          | Выберите темы email-рассылок, на которые вы хотите подписаться:
+        .distribution__row_content
+          .distribution__row_content_column-wrapper
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name5' checked)
+                span.distribution__checkbox_label Сорочки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name6' checked)
+                span.distribution__checkbox_label Галстуки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name7' checked)
+                span.distribution__checkbox_label Кашне
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name8' checked)
+                span.distribution__checkbox_label Трикотаж
+
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name9' checked)
+                span.distribution__checkbox_label Пластроны
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name10' checked)
+                span.distribution__checkbox_label Жилеты
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name11' checked)
+                span.distribution__checkbox_label Бабочки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name12' checked)
+                span.distribution__checkbox_label Камербенд
+
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name13' checked)
+                span.distribution__checkbox_label Подтяжки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name14' checked)
+                span.distribution__checkbox_label Ремни
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name15' checked)
+                span.distribution__checkbox_label Носки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name16' checked)
+                span.distribution__checkbox_label Платки
+
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name17' checked)
+                span.distribution__checkbox_label Брюки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name18' checked)
+                span.distribution__checkbox_label Заколки, запонки
+
+          br
+          br
+          button.btn.btn_theme_black.btn_size_m(type='button' unsubscribe-form-email)
+            | Отказаться от всех e-mail рассылок
+
+      .distribution__row.subscribe
+        .distribution__title
+          | Выберите темы смс-рассылок, на которые вы хотите подписаться:
+        .distribution__row_content
+          .distribution__row_content_column-wrapper
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name5' checked)
+                span.distribution__checkbox_label Сорочки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name6' checked)
+                span.distribution__checkbox_label Галстуки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name7' checked)
+                span.distribution__checkbox_label Кашне
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name8' checked)
+                span.distribution__checkbox_label Трикотаж
+
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name9' checked)
+                span.distribution__checkbox_label Пластроны
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name10' checked)
+                span.distribution__checkbox_label Жилеты
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name11' checked)
+                span.distribution__checkbox_label Бабочки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name12' checked)
+                span.distribution__checkbox_label Камербенд
+
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name13' checked)
+                span.distribution__checkbox_label Подтяжки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name14' checked)
+                span.distribution__checkbox_label Ремни
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name15' checked)
+                span.distribution__checkbox_label Носки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name16' checked)
+                span.distribution__checkbox_label Платки
+
+            .distribution__row_content_column.distribution__row_content_column_four
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name17' checked)
+                span.distribution__checkbox_label Брюки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name18' checked)
+                span.distribution__checkbox_label Заколки, запонки
+
+          br
+          br
+          button.btn.btn_theme_black.btn_size_m(type='button' unsubscribe-form-sms)
+            | Отказаться от всех смс-рассылок
+
+      .distribution__row.personal-area__submit
+        button.btn.btn_theme_black.btn_size_m(type='submit')
+          | Сохранить

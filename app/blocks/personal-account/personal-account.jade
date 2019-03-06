@@ -1,0 +1,215 @@
+mixin personal-account(authorized, adminAccount)
+  // Personal Account
+  .personal-account
+    if (authorized != true)
+      // TODO: Структура если пользователь НЕ авторизован
+      ul.personal-account__bottom.clearfix
+        li.personal-account__bottom_item
+          .personal-account__bottom_link(data-popup='#popup-signin')
+            i.icons.icons__icon-signin
+            | Войти
+        li.personal-account__bottom_item
+          a.personal-account__bottom_link(href='#')
+            i.icons.icons__icon-basket
+            | Корзина
+        li.personal-account__bottom_item
+          .personal-account__bottom_link.personal-account__bottom_request-call(data-popup='#popup-request-call')
+            | Заказать звонок
+
+    if (authorized == true)
+      // TODO: Структура если пользователь авторизован
+      ul.personal-account__top.clearfix
+        li.personal-account__top_item
+          a.personal-account__top_link(href='#')
+            | Самовывоз
+        li.personal-account__top_item
+          a.personal-account__top_link(href='#')
+            | Доставка
+        li.personal-account__top_item
+          a.personal-account__top_link(href='#')
+            | Возврат
+      ul.personal-account__bottom.clearfix
+        li.personal-account__bottom_item
+          .personal-account__bottom_text.personal-account__bottom_bold
+            | Соломакин Алексей
+          if (adminAccount)
+            .personal-account__bottom_separator |
+            .personal-account__bottom_text.personal-account__bottom_separator
+              | Заявки:
+              =' '
+              b: span(style='color: #0096ff') 4
+              =' / '
+              b: span(style='color: #d10909') 1
+          else
+            .personal-account__bottom_separator(style='margin: 0 -3px 0 10px;') |
+        li.personal-account__bottom_item
+          a.personal-account__bottom_link.personal-account__bottom_unbold(href='#')
+            | Выйти
+
+
+
+  // Попап Вход
+  .header-popup-form(id='popup-signin' data-popup-modal)
+    .header-popup-form__title
+      | Войти или
+      span.header-popup-form__title_link(data-popup='#popup-signup')
+        |  зарегистрироваться
+    .header-popup-form__wrapper
+      form.header-popup-form__form(action='?' method='POST')
+        .header-popup-form__form_columns.clearfix
+          .header-popup-form__form_column
+            .header-popup-form__form_group.header-popup-form__form_group_center
+              label.header-popup-form__form_label
+                | Логин
+              input.header-popup-form__form_field(type='text' name='login'
+              data-validation='required')
+          .header-popup-form__form_column
+            .header-popup-form__form_group.header-popup-form__form_group_center
+              label.header-popup-form__form_label
+                | Пароль
+              input.header-popup-form__form_field(type='password' name='password'
+              data-validation='length' data-validation-length='min6')
+              .header-popup-form__form_subfield-link(data-popup='#popup-remind-password')
+                | Забыли пароль?
+        .header-popup-form__form_group.header-popup-form__form_submit
+          button.btn.btn_theme_pale-blue.btn_size_m(type='submit')
+            | Войти
+
+
+  // Попап Регистрация
+  .header-popup-form(id='popup-signup' data-popup-modal)
+    .header-popup-form__title
+      span.header-popup-form__title_link(data-popup='#popup-signin')
+        | Войти
+      |  или зарегистрироваться
+    .header-popup-form__wrapper
+      form.header-popup-form__form(action='?' method='POST')
+        .header-popup-form__form_columns.clearfix
+          .header-popup-form__form_column
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Email
+              input.header-popup-form__form_field(type='text' name='email'
+              data-validation='email')
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | ФИО
+              input.header-popup-form__form_field(type='text' name='fio'
+              data-validation='required')
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Организация
+              input.header-popup-form__form_field(type='text' name='org'
+              data-validation='required')
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Адрес магазина
+              input.header-popup-form__form_field(type='text' name='address'
+              data-validation='required')
+          .header-popup-form__form_column
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Город
+              input.header-popup-form__form_field(type='text' name='city'
+              data-validation='required')
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Телефон
+              input.header-popup-form__form_field(type='text' name='phone-number'
+              data-validation='length number' data-validation-length='10-11'
+              data-validation-ignore='+')
+            // TODO: чтобы Подтверждение пароля работало исправно, в поле 'data-validation-confirm'
+            // должно быть name от input, то есть pass_validate
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Пароль
+                span.header-popup-form__form_label-help
+                  | ( не менее 6 символов )
+              input.header-popup-form__form_field(type='password' name='pass_validate' data-validation='length'
+              data-validation-length='min6')
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Подтверждение пароля
+              input.header-popup-form__form_field(type='password' name='password_confirmation'
+              data-validation='confirmation length' data-validation-confirm='pass_validate'
+              data-validation-length='min6')
+        .header-popup-form__form_group.header-popup-form__form_group_center
+          .header-popup-form__form_subfield-text
+            | Все поля, обязательны для заполнения.
+        .header-popup-form__form_group.header-popup-form__form_submit
+          button.btn.btn_theme_pale-blue.btn_size_m(type='submit')
+            | Регистрация
+
+
+  // Попап Забыли пароль
+  .header-popup-form(id='popup-remind-password' data-popup-modal)
+    .header-popup-form__title
+      | Забыли пароль?
+      .header-popup-form__title_subtitle
+        | Укажите адрес электронной почты или номер телефона, указанные вами при регистрации
+    .header-popup-form__wrapper
+      form.header-popup-form__form(action='?' method='POST')
+        .header-popup-form__form_columns.clearfix
+          .header-popup-form__form_column
+            .header-popup-form__form_group.header-popup-form__form_group_center
+              label.header-popup-form__form_label
+                | Email
+              input.header-popup-form__form_field(type='text' name='email'
+              data-validation='email')
+          .header-popup-form__form_column
+            .header-popup-form__form_group.header-popup-form__form_group_center
+              label.header-popup-form__form_label
+                | Мобильный телефон
+              input.header-popup-form__form_field(type='text' name='phone-number'
+              data-validation='length number' data-validation-length='10-11'
+              data-validation-ignore='+')
+              .header-popup-form__form_subfield-text
+                | ( пример: 79991234567 )
+        .header-popup-form__form_group.header-popup-form__form_submit
+          button.btn.btn_theme_pale-blue.btn_size_m(type='submit')
+            | Отправить
+
+
+  // Попап Заказать звонок
+  .header-popup-form(id='popup-request-call' data-popup-modal)
+    .header-popup-form__title
+      | Заказать звонок
+    .header-popup-form__wrapper
+      form.header-popup-form__form(action='?' method='POST')
+        .header-popup-form__form_columns.header-popup-form__form_columns_large.clearfix
+          .header-popup-form__form_column.header-popup-form__form_column_large
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | ФИО
+              input.header-popup-form__form_field(type='text' name='email'
+              data-validation='email')
+          .header-popup-form__form_column
+            .header-popup-form__form_group
+              label.header-popup-form__form_label
+                | Телефон
+              input.header-popup-form__form_field(type='text' name='phone-number'
+              data-validation='length number' data-validation-length='10-11'
+              data-validation-ignore='+')
+        .header-popup-form__form_columns.header-popup-form__form_columns_large
+          .header-popup-form__form_group
+            label.header-popup-form__form_label
+              | Комментарий
+            textarea.header-popup-form__form_textarea(name='comment' rows='3')
+        .header-popup-form__form_group.header-popup-form__form_submit
+          button.btn.btn_theme_pale-blue.btn_size_m(type='submit')
+            | Заказать
+          button.btn.btn_theme_black.btn_size_m(type='button' data-popup='#popup-request-call')
+            | Отменить
+
+
+  //Попап Товар добавлен
+  .header-popup-good-added#add-basket(data-popup-modal)
+    .good-added
+      .good-added__wrapper
+        .good-added__icon
+          img(src="images/icons/basket-popup.svg", alt="Basket")
+        .good-added__title
+          span Товар добавлен в вашу корзину
+        .good-added__buttons
+          button(type='button' data-popup="#add-basket").btn.btn_theme_black.btn_size_s Продолжить покупки
+          a(href="basket.html").btn.btn_theme_black.btn_size_s Перейти в корзину

@@ -1,0 +1,82 @@
+mixin dealers1()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='/personal_manager_account2.html#dealers')
+          span.name=item.name
+          br
+          =item.description
+        td
+          =item.requestNumber
+        td
+          =item.requestDate
+
+  .paa-registration-requests.pma-dealers
+
+    .pma-dealers__search
+      .pma-dealers__search_header
+        .pma-dealers__search_column
+          label Поиск дилера
+          .pma-dealers__search_input
+            form.header__search_form(action='?' method='POST')
+              input.header__search_field(type='search' name='q')
+              button.header__search_submit(type='submit')
+            .pma-dealers__search_input-warning
+              | По вашему запросу ничего не найдено. Попробуйте еще раз.
+        .pma-dealers__search_column
+          | Всего дилеров: 8
+
+      .pma-dealers__search_table
+        .pma-dealers__search_finded
+          b Найдено:
+          =' '
+          | 2
+        table.personal-admin-account__table
+          +table-tr([{
+              name: 'Телингатер Соломон Бенедиктович',
+              description: 'ООО Пегас'
+          }, {
+              name: 'Лазурский Вадим Владимирович',
+              description: 'ООО Лигатура'
+          }])
+
+
+    table.personal-admin-account__table
+      tr
+        th
+          span(sort-table)
+            | ФИО
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='17%')
+          span(sort-table)
+            | Дата регистрации
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='17%')
+          span(sort-table)
+            | Дата последнего заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+      +table-tr([{
+          name: 'Телингатер Соломон Бенедиктович',
+          description: 'ООО Пегас',
+          requestNumber: '0000001',
+          requestDate: '10.02.2017'
+      }, {
+          name: 'Лазурский Вадим Владимирович',
+          description: 'ООО Лигатура',
+          requestNumber: '0000002',
+          requestDate: '10.02.2017'
+      }, {
+          name: 'Короленко Лариса Дмитриевна',
+          description: 'ИП Ласточка',
+          requestNumber: '0000003',
+          requestDate: '10.02.2017'
+      }, {
+          name: 'Ким Валерий Карпович',
+          description: 'ООО Восток',
+          requestNumber: '0000004',
+          requestDate: '09.02.2017'
+      }])

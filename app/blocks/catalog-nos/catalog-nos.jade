@@ -1,0 +1,37 @@
+mixin catalog-nos()
+  .catalog-nos
+    .catalog-nos__column.clearfix
+      .catalog-nos__column_left
+        .catalog-nos__item.catalog-nos__item_one
+          .catalog-nos__title
+            | Каталог поштучной
+            br
+            | подсортировки
+            br
+            b NOS
+
+        .catalog-nos__item.catalog-nos__item_two
+          .catalog-nos__title
+            b Преимущества:
+          .catalog-nos__text.catalog-nos__text_large
+            | &mdash; Продукция из каталога всегда в наличии;
+            br
+            | &mdash; Количество приобретаемой продукции не ограничено.
+          br
+          br
+          .catalog-nos__title
+            b Выгода:
+          .catalog-nos__text.catalog-nos__text_large
+            | &mdash; Уменьшается закупочный бюджет;
+            br
+            | &mdash; Уменьшается склад;
+            br
+            | &mdash; Увеличиваются продажи.
+          .catalog-nos__order-catalog
+            a.btn.btn_theme_black.btn_size_m(href='#')
+              | Заказать каталог
+              i.fa.fa-angle-right
+
+      .catalog-nos__column_right
+        .catalog-nos__item.catalog-nos__item_three
+          img(src='/images/catalog_nos.png')

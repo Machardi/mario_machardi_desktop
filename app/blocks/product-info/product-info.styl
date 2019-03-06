@@ -1,0 +1,369 @@
+.product-info
+  margin 21px 0 78px
+
+  &__sliders
+    float left
+    height 635px
+    position relative
+    width 515px
+
+    &_top-buttons
+      position absolute
+      right 0
+      top 0
+      width 45px
+      z-index 1
+
+    &_like,
+    &_print
+      background none
+      border none
+      display block
+      margin 0 auto
+      padding 6px
+
+    &_like
+      &:hover
+        & .icons
+          retinaSprite($like_active_group)
+
+    &_print
+      &:hover
+        & .icons
+          retinaSprite($print_active_group)
+
+    &_wrapper
+      opacity 0
+      position absolute
+      top 0
+      transition opacity 0.15s ease-out, visibility 0.15s ease-out
+      visibility hidden
+      width 100%
+
+      &[active]
+        opacity 1
+        visibility visible
+
+  &__slider
+    &_zoom-image
+      height 300px
+      //position absolute
+      right -330px
+      width 300px
+
+    & .fotorama__wrap
+      margin 0 auto
+
+    & .fotorama__stage
+      transition height 0.15s ease-out
+
+    & .fotorama__arr
+      background none
+      border none
+      height 100%
+      width 30px
+      z-index 1
+
+      &.fotorama__arr--disabled
+        opacity 0.5
+
+    & .fotorama__arr--prev
+      retinaSprite($arrow_slider_left_group)
+
+    & .fotorama__arr--next
+      retinaSprite($arrow_slider_right_group)
+
+    & .fotorama__thumb-border
+      display none
+
+    & .fotorama__nav__frame
+      transition opacity 0.15s ease-out
+
+    & .fotorama__active
+      opacity 0.5
+
+    &_item
+      height 100%
+      margin 0 auto
+      max-width 310px
+      text-align center
+
+      & img
+        height auto
+        max-width 100%
+  &-list
+    list-style-type: none
+    display none
+    position: absolute
+    padding 12px
+    margin: 0
+    background-color #000
+    width 250px
+    height: auto
+    border-radius 0px
+    z-index 19
+    top calc(100% - 55px)
+    transform translateY(-100%)translateX(-41%)
+    transition all 300ms ease-out
+    
+    &:after
+      content: '';
+      position: absolute;
+      border: 7px solid transparent;
+      border-top: 10px solid #000;
+      right: 50%;
+      bottom: -8px;
+      -webkit-transform: translateY(50%);
+      transform: translateY(50%);
+    
+    &__item
+      list-style-type: none
+      color #fff
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+      justify-content space-between
+      font-size 14px
+      line-height 1.4
+
+  &__info
+    float left
+    padding-left 100px
+    width calc(100% - 515px)
+
+    &_title
+      font-size 26px
+      font-weight 100
+      line-height 37px
+      margin-bottom 8px
+
+    &_article
+      font-size 14px
+      font-weight 100
+      line-height 18px
+      margin-bottom 13px
+
+    &_price
+      font-size 34px
+      font-weight 700
+      line-height 37px
+      margin-bottom 8px
+
+      & .rub
+        margin-left 5px
+
+      &_old,
+      &_new
+        display inline-block
+        vertical-align middle
+
+      &_old
+        color #858585
+        text-decoration line-through
+
+      &_new
+        color #e20c0c
+        margin-left 5px
+
+    &_more-info
+      font-size 16px
+      font-weight 100
+      margin-bottom 35px
+
+      & a
+        &:hover
+          text-decoration underline
+
+    &_label
+      font-size 16px
+      font-weight 100
+
+    &_color
+      margin-bottom 30px
+
+      &_wrapper
+        margin-top 15px
+
+      &_item
+        display inline-block
+        margin 0 10px
+        transition opacity 0.15s ease-out
+        vertical-align middle
+        width 70px
+
+        &:first-child
+          margin-left 0
+
+        &:last-child
+          margin-right 0
+
+        &_active
+          opacity 0.5
+
+        & img
+          height auto
+          max-width 100%
+
+    &_grids
+      margin-bottom 17px
+
+      &_select-wrapper
+        display inline-block
+        margin-right 13px
+        vertical-align middle
+
+        & .product-info__info_label
+          margin-right 22px
+
+      & .product-info__info_label
+        display inline-block
+        vertical-align middle
+
+      & .chosen-container
+        display inline-block
+        vertical-align middle
+
+      &_input-wrapper
+        display inline-block
+        margin-right 33px
+        vertical-align middle
+
+        & .product-info__info_label
+          margin-right 15px
+
+      &_input
+        font-size 16px
+        font-weight 300
+        padding 7px 10px
+        width 95px
+        text-align: center
+        text-indent: -10px
+        
+        &-wrapper
+          position: relative
+        
+          .input-number-increment,
+          .input-number-decrement
+            display inline-block
+            retinaSprite($arrow_chosen_down_group)
+            position relative
+            width 16px
+            vertical-align middle
+            position: absolute
+            right 3px
+            cursor: pointer
+          
+          .input-number-increment
+            top 22%
+            right 6px
+            transform rotate(180deg)
+           
+          .input-number-decrement
+            top 60% 
+            
+
+      &_size-guide
+        color #12b4ff
+        display inline-block
+        font-size 14px
+        font-weight 300
+        line-height 15px
+        vertical-align middle
+
+        & .icons,
+        & span
+          display inline-block
+          vertical-align bottom
+
+        & .icons
+          margin-right 9px
+
+        &:hover
+          & span
+            color #12b4ff
+            text-decoration underline
+
+    &_sizes
+      margin-bottom 40px
+      display -webkit-flex
+      display -moz-flex
+      display -ms-flex
+      display -o-flex
+      display flex
+
+      & .product-info__info_label
+        display inline-block
+        margin-right 6px
+        vertical-align middle
+
+      &_wrapper
+        display inline-block
+        vertical-align middle
+        width 400px
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        flex-wrap wrap
+
+      &_item
+        display -webkit-flex
+        display -moz-flex
+        display -ms-flex
+        display -o-flex
+        display flex
+        margin 4.5px
+        height 40px
+
+      &_label
+        width 40px
+        height 40px
+        display block
+
+        & input
+          display none
+
+      &_label input:checked + &_checkbox
+        background-color black
+        color white
+
+      &_checkbox
+        background-color #fbfbfb
+        color: #a9a9a9
+        border: 1px solid #e6e6e6
+        border-right: none
+        cursor pointer
+        display block
+        font-size 18px
+        font-weight 300
+        line-height 22px
+        padding 9px 5px
+        user-select none
+        transition background-color 0.15s ease-out, color 0.15s ease-out
+        width 40px
+        height 40px
+        text-align center
+        position: relative
+        transition all 300ms ease-out
+        
+        &:hover
+          .product-info-list
+            display: block
+
+      &_input
+        font-size 16px
+        font-weight 300
+        padding 7px 10px
+        width 50px
+        border: 1px solid #e6e6e6
+        box-shadow none
+        appearance none
+        text-align: center
+
+    &_add-basket
+      & .btn
+        max-width 465px
+        width 100%

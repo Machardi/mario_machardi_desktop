@@ -1,0 +1,47 @@
+mixin innovations(showDesc)
+  // Инновации
+  .innovations
+    if (!showDesc)
+      .innovations__title.global-blocks-title
+        span.global-blocks-title_text Инновации
+    .innovations__list.clearfix
+      .innovations__list_item
+        .innovations__list_item_wrapper
+          .innovations__list_icons
+            .icons.icons__wolecula-fresh
+          .innovations__list_title
+            | Wolecula + Fresh
+          .innovations__list_intro
+            | Свежесть круглый день
+          if (showDesc)
+            .innovations__list_description
+              | Благодаря измененной структуре верхнего слоя ткани
+              br
+              | неприятные запахи легко удаляются при стирке.
+      .innovations__list_item
+        .innovations__list_item_wrapper
+          .innovations__list_icons
+            .icons.icons__wolecula-antismell
+            .icons.icons__bacteria-soil-resist
+          .innovations__list_title
+            | Wolecula + Antismell & Bacteria + Soil resist
+          .innovations__list_intro
+            | Защита от запахов, грязи и бактерий
+          if (showDesc)
+            .innovations__list_description
+              | Защита с активными элементами не дает задержаться
+              br
+              | пятнам и другим загрязнениям на ткани.
+      .innovations__list_item
+        .innovations__list_item_wrapper
+          .innovations__list_icons
+            .icons.icons__wolecula-non-iron
+          .innovations__list_title
+            | Wolecula + Non Iron
+          .innovations__list_intro
+            | Не требует глажки
+          if (showDesc)
+            .innovations__list_description
+              | Благодаря использованию протеинов шелка ткань сияет
+              br
+              | и становится неповторимо гладкой и приятной на ощупь.

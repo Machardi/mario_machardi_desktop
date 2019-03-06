@@ -1,0 +1,83 @@
+mixin goodsItems(items)
+  each item in items
+    a.popular-goods__slider_item(href='product.html')
+      .popular-goods__slider_image
+        img(src=item.image alt=item.title)
+      .popular-goods__slider_title= item.title
+      .popular-goods__slider_price= item.price
+        span.rub q
+
+mixin popular-goods()
+  // Популярные товары
+  .popular-goods
+    .popular-goods__title.global-blocks-title
+      span.global-blocks-title_text Популярные товары
+    .popular-goods__dropdown.dropdown
+      button.popular-goods__dropdown_button.dropdown-toggle(type='button' id='popular-goods-dropdown' data-toggle='dropdown'
+      aria-haspopover='true' aria-expanded='false')
+        span Сорочки
+        i.fa.fa-angle-down
+      ul.popular-goods__dropdown_menu.dropdown-menu(aria-labelledby='popular-goods-dropdown')
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Сорочки
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Галстуки
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Кашне
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Пластроны
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Жилеты
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Бабочки
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Подтяжки
+        li.popular-goods__dropdown_menu-item(data-option='dropdown-item')
+          | Запонки
+
+    .popular-goods__slider
+      +goodsItems([{
+        image: 'uploads/img_2.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_3.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_4.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_5.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_6.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_7.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_3.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_4.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_5.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_6.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }, {
+        image: 'uploads/img_7.jpg',
+        title: 'Easy Care | SF28004',
+        price: 3900
+      }])

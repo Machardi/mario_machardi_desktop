@@ -1,0 +1,185 @@
+mixin contacts()
+  .contacts
+    // TODO: информация по созданию yandex карт: https://tech.yandex.ru/maps/doc/constructor/concepts/About-docpage/
+    .contacts__map
+      script(type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=bknxXglzs58TL1Pwup2FFKLXc4m5lQvH&width=100%&height=505&lang=ru_RU&sourceType=constructor&scroll=false")
+
+    .contacts__columns.clearfix
+      .contacts__column
+        .contacts__column_wrapper
+          .contacts__info_group
+            .contacts__info-title
+              | Адрес
+            .contacts__info-text
+              | 105122, г. Москва, Щелковское ш., д.2а
+          .contacts__info_group
+            .contacts__info-title
+              | Телефон
+            .contacts__info-text
+              | +7 (495) 778-65-25
+              br
+              | +7 (495) 978-47-97
+              br
+              | +7 (495) 979-85-03
+              br
+              br
+              | Внутренний номер: 58-84
+          .contacts__info_group
+            .contacts__info-title
+              | Факс
+            .contacts__info-text
+              | +7 (495) 580-37-25
+          .contacts__info_group
+            .contacts__info-title
+              | Почта
+            .contacts__info-text
+              a(href='mailto:info@machardi.ru') info@machardi.ru
+
+
+      .contacts__column
+        .contacts__column_wrapper
+          .contacts__requisites_title
+            | Реквизиты
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Полное наименование организации
+            .contacts__requisites_group-text
+              | Общество с ограниченной ответственностью «ТСМ- групп»
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Краткое наименование организации
+            .contacts__requisites_group-text
+              | ООО «ТСМ-групп»
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Юридический адрес
+            .contacts__requisites_group-text
+              | 119334, г. Москва, Проспект 60-летия Октября, д.5, корп.2, кв.68
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | ИНН/КПП
+            .contacts__requisites_group-text
+              | 7736587655/773601001
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | № расчетного счета
+            .contacts__requisites_group-text
+              | 40702810800020495901
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Основной государственный регистрационный номер (ОГРН)
+            .contacts__requisites_group-text
+              | 5087746533232
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | ОКПО
+            .contacts__requisites_group-text
+              | 89535871
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | ОКВЭД
+            .contacts__requisites_group-text
+              | 51.41
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | ОКФС
+            .contacts__requisites_group-text
+              | 16
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | ОКАТО
+            .contacts__requisites_group-text
+              | 45293558000
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Наименование банка
+            .contacts__requisites_group-text
+              | АКБ «Мастер-Капитал» (ОАО)
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | БИК банка
+            .contacts__requisites_group-text
+              | 044585730
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Корреспондентский счет банка
+            .contacts__requisites_group-text
+              | 30101810300000000730
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Генеральный директор
+            .contacts__requisites_group-text
+              | Суворов Р.В.
+          .contacts__requisites_group
+            .contacts__requisites_group-title
+              | Главный бухгалтер
+            .contacts__requisites_group-text
+              | Суворов Р.В.
+
+
+      .contacts__column
+        .contacts__column_wrapper.contacts__feedback-form
+          .contacts__feedback-form_title
+            | Форма обратной связи
+          .contacts__feedback-form_preview-text
+            | Заполнив форму вы можете оформить заявку, узнать об интересующей вас услуге,  либо оставить сообщение для наших специалистов.
+          form.contacts__feedback-form_form(action='?' method='POST')
+            .contacts__feedback-form_group
+              label.contacts__feedback-form_label(for='fio')
+                | ФИО*
+              input.contacts__feedback-form_field(id='fio' type='text' name='fio'
+              data-validation='required')
+            .contacts__feedback-form_group
+              label.contacts__feedback-form_label(for='org')
+                | Организация
+              input.contacts__feedback-form_field(id='fio' type='text' name='org')
+            .contacts__feedback-form_group
+              label.contacts__feedback-form_label(for='address_shop')
+                | Адрес магазина
+              input.contacts__feedback-form_field(id='fio' type='text' name='address_shop')
+            .contacts__feedback-form_group
+              label.contacts__feedback-form_label(for='message')
+                | Ваше сообщение*
+              textarea.contacts__feedback-form_textarea(id='message' name='message' rows=12
+              data-validation='required')
+            .contacts__feedback-form_noty
+              | * – поля, обязательные для заполнения
+            .contacts__feedback-form_group-submit
+              button.btn.btn_theme_pale-blue.btn_size_m(type='submit')
+                | Отправить
+
+    .contacts__managers
+      .contacts__managers_wrapper
+        .contacts__managers_title
+          | Менеджеры
+        .contacts__managers_items.clearfix
+
+          .contacts__managers_item
+            .contacts__managers_photo
+              img(src='uploads/img_45.png' alt='Самойлов Виктор Петрович')
+            .contacts__managers_name
+              | Самойлов Виктор Петрович
+            .contacts__managers_phone-number
+              | +7 (495) 778-65-25
+            .contacts__managers_email
+              a(href='mailto:info@machardi.ru') info@machardi.ru
+
+          .contacts__managers_item
+            .contacts__managers_photo
+              img(src='uploads/img_46.png' alt='Анискина Зинаида Васильевна')
+            .contacts__managers_name
+              | Анискина Зинаида Васильевна
+            .contacts__managers_phone-number
+              | +7 (495) 778-65-25
+            .contacts__managers_email
+              a(href='mailto:info@machardi.ru') info@machardi.ru
+
+          .contacts__managers_item
+            .contacts__managers_photo
+              img(src='uploads/img_47.jpg' alt='Кац Мария Эдуардовна')
+            .contacts__managers_name
+              | Кац Мария Эдуардовна
+            .contacts__managers_phone-number
+              | +7 (495) 778-65-25
+            .contacts__managers_email
+              a(href='mailto:info@machardi.ru') info@machardi.ru

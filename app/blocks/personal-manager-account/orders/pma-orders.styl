@@ -1,0 +1,137 @@
+.pma-orders
+  padding 45px 40px 0
+
+  & [table-toggle-view]
+    user-select none
+
+  &__header
+    border-bottom 1px solid #f1f4f8
+    display flex
+    align-items center
+    margin-bottom 50px
+    padding-bottom 30px
+
+    &_column
+      &:nth-child(1)
+        width 70%
+
+      &:nth-child(2)
+        text-align right
+        width 30%
+
+  &__order-number
+    display inline-block
+    font-size 30px
+    font-weight 700
+    vertical-align middle
+
+  &__order-status
+    display inline-block
+    margin-left 75px
+    vertical-align middle
+
+    & label
+      margin-right 15px
+
+    & .basket__select-control + .chosen-container .chosen-single
+      font-size 12px
+      padding 6px 10px
+
+  &__table-option
+    & span
+      color #0096ff
+      cursor pointer
+      display inline-block
+      font-size 12px
+      font-weight 100
+      vertical-align middle
+
+      &:hover
+        text-decoration underline
+
+    & i
+      color black
+      display inline-block
+      font-size 20px
+      font-weight 100
+      margin-left 10px
+      vertical-align middle
+
+  &__detail-product
+    display none
+    margin-top 40px
+    padding 0 0 30px 50px
+
+    &_content
+      display flex
+
+    &_photo
+      width 115px
+
+      & img
+        height auto
+        max-width 100%
+
+    &_info
+      margin-left 95px
+
+    &_info-group
+      display flex
+      margin-bottom 15px
+
+    &_info-label
+      padding-right 10px
+      width 115px
+
+    &_info-content
+      font-weight 700
+
+  & .personal-admin-account__table td
+    padding 28px 10px
+    vertical-align top
+
+  &__total
+    border-top 1px solid #f1f4f8
+    font-size 24px
+    font-weight 100
+    padding 34px 7.2% 34px 0
+    text-align right
+    text-transform uppercase
+
+  //& .personal-area__submit
+  //  padding-bottom 0
+
+  & .personal-admin-account__table
+    & .status
+      color #0096ff
+
+      &_under
+        color #0096ff
+
+      &_sent
+        color #46963d
+
+      &_ready
+        color #ff6701
+
+  &__overview
+    border-bottom 1px solid #f1f4f8
+    margin-bottom 50px
+    padding 0 0 45px
+
+    &_item
+      border-right 1px solid #dddddd
+      color #0096ff
+      font-size 16px
+      font-weight 100
+      padding 0 10px
+
+      &:focus
+        color #0096ff
+
+      &.active,
+      &:hover
+        color black
+
+      &:last-child
+        border-right none

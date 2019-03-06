@@ -1,0 +1,23 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/wholesale-buyers/wholesale-buyers-page
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Оптовым покупателям';
+  - var pageId = 'wholesale-buyers';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +breadcrumbs({
+      current_page: 'Оптовым покупателям'
+    })
+    +wholesale-buyers-page(true)
+    +footer()

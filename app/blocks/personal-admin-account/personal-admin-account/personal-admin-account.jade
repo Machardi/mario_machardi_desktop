@@ -1,0 +1,37 @@
+include ../registration-requests/registration-requests1
+include ../managers/managers1
+include ../dealers/dealers1
+include ../distribution/distribution1
+include ../closed-cities/closed-cities1
+
+mixin personal-admin-account()
+  .personal-admin-account.personal-area
+    .personal-area__tabs
+      ul.personal-area__tabs_items.clearfix
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#registration-requests'
+        aria-controls='registration-requests' role='tab' data-toggle='tab'): b
+            | Заявки на регистрацию
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#managers'
+        aria-controls='managers' role='tab' data-toggle='tab'): b
+            | Менеджеры
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#dealers'
+        aria-controls='dealers' role='tab' data-toggle='tab'): b
+            | Дилеры
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#distribution'
+        aria-controls='distribution' role='tab' data-toggle='tab'): b
+            | Рассылка
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#closed-cities'
+        aria-controls='closed-cities' role='tab' data-toggle='tab'): b
+            | Закрытые города
+
+      .personal-area__tabs_panels
+        .personal-area__tabs_panel-content#registration-requests
+          +registration-requests1()
+        .personal-area__tabs_panel-content#managers
+          +managers1()
+        .personal-area__tabs_panel-content#dealers
+          +dealers1()
+        .personal-area__tabs_panel-content#distribution
+          +distribution()
+        .personal-area__tabs_panel-content#closed-cities
+          +closed-cities1()

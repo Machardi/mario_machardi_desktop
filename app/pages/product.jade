@@ -1,0 +1,31 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/product-info/product-info
+include ../blocks/popular-goods/popular-goods
+include ../blocks/more-info-product/more-info-product
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Товар';
+  - var pageId = 'product';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +breadcrumbs({
+      parent_page_1: 'Продукция',
+      inner_parents: [{
+        page_title: 'Сорочки'
+      }],
+      current_page: 'CL337KOM'
+    })
+    +product-info()
+    +popular-goods()
+    +more-info-product()
+    +footer()

@@ -1,0 +1,289 @@
+mixin distribution3()
+  .distribution
+    form(action='?' method='POST')
+      .distribution__row.distribution-settings
+        .distribution__title
+          | Редактирование параметров рассылки:
+        .distribution__row_content
+          .distribution__checkbox-links
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='all')
+              span.distribution__checkbox-link_label Все
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label А
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Б
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label В
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Г
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Д
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Е
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ё
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ж
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label З
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label И
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Й
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label К
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Л
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label М
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Н
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label О
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label П
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Р
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1' checked)
+              span.distribution__checkbox-link_label С
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Т
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label У
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ф
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Х
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ч
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ц
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ч
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ш
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Щ
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ъ
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ы
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ь
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Э
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Ю
+            label.distribution__checkbox-link
+              input.distribution__checkbox-link_input(type='checkbox' name='name1')
+              span.distribution__checkbox-link_label Я
+
+
+          .distribution__selectes
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Смирнова Татьяна Васильевна
+                  small ООО Василек
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Самитов Юрий Павлович
+                  small ОАО Самтек
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Силуянов Анастав Петрович
+                  small ООО Силуянов
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Самшит Гюльчатай Захаровна
+                  small ОАО Самшит
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Санников Валерий Александрович
+                  small ОАО Самшит
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Самитов Юрий Павлович
+                  small ОАО Самтек
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Силуянов Анастав Петрович
+                  small ООО Силуянов
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+            .distribution__selectes_row
+              .distribution__selectes_column
+                .distribution__selectes_label
+                  | Самшит Гюльчатай Захаровна
+                  small ОАО Самшит
+              .distribution__selectes_column
+                .distribution__select-dropdown.dropdown
+                  button.distribution__select-dropdown_button(type='button' aria-expanded='false')
+                    span Выберите
+                    .distribution__select-dropdown_button_caret
+                  ul.distribution__select-dropdown_menu.dropdown-menu
+                    li.distribution__select-dropdown_item.clearfix
+                      +checkboxesSelectes()
+
+          mixin checkboxesSelectes()
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='all' checked)
+              span.distribution__checkbox_label Все
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name17')
+              span.distribution__checkbox_label Сорочки
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Галстуки
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Кашне
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Трикотаж
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Пластроны
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Жилеты
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Бабочки
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Камербенд
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Подтяжки
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Ремни
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Носки
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Платки
+            br
+            label.distribution__checkbox
+              input.distribution__checkbox_input(type='checkbox' name='name18')
+              span.distribution__checkbox_label Брюки
+
+
+      .distribution__row.personal-area__submit
+        button.btn.btn_theme_black.btn_size_m(type='submit')
+          | Сохранить

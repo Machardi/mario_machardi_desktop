@@ -1,0 +1,64 @@
+mixin delivery-payment()
+  .basket__global-tab_header.clearfix
+    ul.basket__global-tab_tabs.clearfix(role='tablist')
+      li.basket__global-tab_tabs_item.active
+        a.basket__global-tab_tabs_link(href='#delivery-payment'
+        aria-controls='delivery-payment' role='tab' data-toggle='tab')
+          b Доставка и оплата
+
+  .basket__global-tab_panels
+    .basket__global-tab_panel-content.active#delivery-payment
+      .basket__delivery-payment.clearfix
+        .basket__delivery-payment_column
+          .basket__row
+            label.basket__label
+              | Способ доставки
+            label.basket__radio-control
+              input(type='radio' name='delivery_method' value=1 checked)
+              .basket__radio-control_label
+                | По Москве (300р)
+            label.basket__radio-control
+              input(type='radio' name='delivery_method' value=2)
+              .basket__radio-control_label
+                | Самовывоз из ПВЗ -  г. Москва, Верхняя Радищевская улица, д. 5, (100р)
+            label.basket__radio-control
+              input(type='radio' name='delivery_method' value=3)
+              .basket__radio-control_label
+                | В другой город курьерской службой(по тарифу компании)
+          .basket__row.transport-company
+            label.basket__label
+              | Выберите курьерскую службу
+            select.basket__select-control(name='transport_company')
+              option(value='transport_company') компания
+              option(value='transport_company_2') компания 2
+          .basket__row
+            label.basket__label
+              | Город
+            input.basket__input-control(type='text' name='city')
+          .basket__row
+            label.basket__label
+              | Адрес доставки
+            textarea.basket__text-control(name='address' rows=4)
+          
+
+        .basket__delivery-payment_column
+          .basket__row.payment-method
+            label.basket__label
+              | Способ оплаты
+            label.basket__radio-control
+              input(type='radio' name='payment_method' value=1 checked)
+              .basket__radio-control_label
+                | Оплата наличными при получении товара
+            label.basket__radio-control
+              input(type='radio' name='payment_method' value=2)
+              .basket__radio-control_label
+                | Оплата безналичным расчётом и выставление счета клиенту (юр.лицо)
+            label.basket__radio-control
+              input(type='radio' name='payment_method' value=2)
+              .basket__radio-control_label
+                | Яндекс.Касса
+
+
+    .basket__global-tab_next-step
+      button.btn.btn_theme_black.btn_size_m(type='button' mm-next-step=4)
+        | Перейти к подтверждению заказа

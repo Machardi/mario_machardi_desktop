@@ -1,0 +1,26 @@
+include ../blocks/header-print/header-print
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/product-info-print/product-info-print
+include ../blocks/more-info-product/more-info-product
+include ../blocks/more-info-product-print/more-info-product-print
+include ../blocks/footer-print-retail/footer-print
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Товар (печать)';
+  - var pageId = 'product-print';
+
+block content
+  .page__wrapper
+    +header-print()
+    +breadcrumbs({
+      parent_page_1: 'Продукция',
+      inner_parents: [{
+        page_title: 'Сорочки'
+      }],
+      current_page: 'CL337KOM'
+    })
+    +product-info-print()
+    +more-info-product-print()
+    +footer-print-retail()

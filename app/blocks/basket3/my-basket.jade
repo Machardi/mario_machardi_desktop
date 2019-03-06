@@ -1,0 +1,166 @@
+mixin my-basket(noGoods)
+  .basket__global-tab_header.clearfix
+    ul.basket__global-tab_tabs.clearfix(role='tablist')
+      li.basket__global-tab_tabs_item.active
+        a.basket__global-tab_tabs_link(href='#my-basket'
+        aria-controls='my-basket' role='tab' data-toggle='tab')
+          b Моя корзина&nbsp;
+          | (1)
+      li.basket__global-tab_tabs_item
+        a.basket__global-tab_tabs_link(href='#wishlist'
+        aria-controls='wishlist' role='tab' data-toggle='tab')
+          b Wishlist&nbsp;
+          | (5)
+    .basket__my-basket_options
+      .basket__my-basket_options
+        button.basket__my-basket_options_print(type='button' print='.basket__my-basket_table')
+          .icons.icons__print
+        button.basket__my-basket_options_turn(type='button' hide-preview-photo='false')
+          i.fa.fa-angle-down
+
+  .basket__global-tab_panels
+    .basket__global-tab_panel-content.active#my-basket
+      if (noGoods)
+        .basket__my-basket_no-goods
+          | В вашей корзине пока нет товаров, готовых к заказу.
+      else
+        .basket__my-basket_table
+          .basket__my-basket_table_tr
+            .basket__my-basket_table_th(width=2)
+              a.basket__my-basket_table_sorted-link(href='#')
+                | Заказанные товары
+                //i.fa.fa-angle-up.no-print
+                i.fa.fa-angle-down.no-print
+            .basket__my-basket_table_th(width=1)
+              a.basket__my-basket_table_sorted-link(href='#')
+                | Размер / Сетка
+                //i.fa.fa-angle-up.no-print
+                i.fa.fa-angle-down.no-print
+            .basket__my-basket_table_th(width=1)
+              a.basket__my-basket_table_sorted-link(href='#')
+                | Количество
+                //i.fa.fa-angle-up.no-print
+                i.fa.fa-angle-down.no-print
+            .basket__my-basket_table_th(width=1)
+              a.basket__my-basket_table_sorted-link(href='#')
+                | Цена
+                //i.fa.fa-angle-up.no-print
+                i.fa.fa-angle-down.no-print
+            .basket__my-basket_table_th(width=1)
+              a.basket__my-basket_table_sorted-link(href='#')
+                | Стоимость
+                //i.fa.fa-angle-up.no-print
+                i.fa.fa-angle-down.no-print
+
+          .basket__my-basket_table_tr
+            .basket__my-basket_table_td(width=2)
+              a.basket__good(href='#')
+                .basket__good_photo
+                  img(src='uploads/img_2.jpg')
+                .basket__good_name
+                  | Easy Care | SF28004
+            .basket__my-basket_table_td(width=1)
+              select.basket__select
+                option(value='SF1-12') SF1-12
+                option(value='SF1-11') SF1-11
+                option(value='SF1-10') SF1-10
+            .basket__my-basket_table_td.basket__my-basket_table_td--numder(width=1)
+              span.input-number-decrement
+              input.basket__good_count.input-number(type='text' name='count' value=1 min='0'
+              data-validation='number')
+              span.input-number-increment
+            .basket__my-basket_table_td(width=1)
+              .basket__good_price
+                | 1 590&nbsp;
+                span.rub q
+            .basket__my-basket_table_td(width=1)
+              .basket__good_price
+                b 1 590&nbsp;
+                span.rub q
+              button.basket__good_remove.no-print(type='button')
+                | &times;
+
+          .basket__my-basket_table_tr
+            .basket__my-basket_table_td(width=2)
+              a.basket__good(href='#')
+                .basket__good_photo
+                  img(src='uploads/img_2.jpg')
+                .basket__good_name
+                  | Easy Care | SF28004
+            .basket__my-basket_table_td(width=1)
+              select.basket__select
+                option(value='SF1-12') SF1-12
+                option(value='SF1-11') SF1-11
+                option(value='SF1-10') SF1-10
+            .basket__my-basket_table_td.basket__my-basket_table_td--numder(width=1)
+              span.input-number2-decrement
+              input.basket__good_count.input-number2(type='text' name='count' value=1 min='0'
+              data-validation='number')
+              span.input-number2-increment
+            .basket__my-basket_table_td(width=1)
+              .basket__good_price
+                | 1 590&nbsp;
+                span.rub q
+            .basket__my-basket_table_td(width=1)
+              .basket__good_price
+                b 1 590&nbsp;
+                span.rub q
+              button.basket__good_remove.no-print(type='button')
+                | &times;
+
+    .basket__global-tab_panel-content#wishlist
+      .basket__wishlist.clearfix
+        +good-item([{
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }, {
+          image: 'uploads/img_2.jpg',
+          title: 'Easy Care | SF28004',
+          price: 3990
+        }])
+
+    if (!noGoods)
+      .basket__global-tab_next-step
+        button.btn.btn_theme_black.btn_size_m(type='button' mm-next-step=2)
+          | Оформить заказ

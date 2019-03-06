@@ -1,0 +1,105 @@
+mixin footer()
+  // Footer
+  .footer
+    .footer__logo
+      .footer__logo_wrapper
+        .logos.logos__official-logo.logos__official-logo_black
+
+    .footer__wrapper.clearfix
+      // Контактная информация
+      .footer__group.footer__contacts
+        .footer__contacts_wrapper
+          .footer__contacts_group
+            .footer__contacts_title
+              | Телефоны:
+            .footer__contacts_text
+              | +7 (495) 778-65-25, 978-47-97,
+              br
+              |979-85-03
+          .footer__contacts_group
+            .footer__contacts_title
+              | Внутренний номер:
+            .footer__contacts_text
+              | 58-84
+          .footer__contacts_group
+            .footer__contacts_title
+              | Почта:
+            .footer__contacts_text
+              a(href='mailto:info@machardi.ru') info@machardi.ru
+
+      // Меню в подвале
+      .footer__group.footer__menu
+        .footer__menu_wrapper.clearfix
+          .footer__menu_group
+            .footer__menu_title
+              a.footer__menu_title_link(href='products.html')
+                | Продукция
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Сорочки
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Галстуки
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Кашне
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Пластроны
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Жилеты
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Бабочки
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Подтяжки
+            .footer__menu_item
+              a.footer__menu_link(href='catalog.html')
+                | Запонки
+          .footer__menu_group
+            .footer__menu_title
+              a.footer__menu_title_link(href='technologies.html')
+                | Технологии
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Non Iron
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Wolecula
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Welcon
+          .footer__menu_group
+            .footer__menu_title
+              a.footer__menu_title_link(href='about_company.html')
+                | О компании
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Сотрудничество
+            .footer__menu_item
+              a.footer__menu_link(href='shops.html')
+                | Магазины
+            .footer__menu_item
+              a.footer__menu_link(href='contacts.html')
+                | Контакты
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Гарантии
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Возврат и обмен
+            .footer__menu_item
+              a.footer__menu_link(href='#')
+                | Доставка
+            .footer__menu_item
+              a.footer__menu_link(href='reviews.html')
+                | Отзывы
+
+      // Поиск
+      .footer__group.footer__search
+        .footer__search_wrapper
+          form.footer__search_form(action='?' method='POST')
+            input.footer__search_field(type='search' name='q')
+            button.footer__search_submit(type='submit')

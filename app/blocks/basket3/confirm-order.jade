@@ -1,0 +1,55 @@
+mixin confirm-order()
+  .basket__global-tab_header.clearfix
+    ul.basket__global-tab_tabs.clearfix(role='tablist')
+      li.basket__global-tab_tabs_item.active
+        a.basket__global-tab_tabs_link(href='#confirm-order'
+        aria-controls='confirm-order' role='tab' data-toggle='tab')
+          b Подтверждение заказа
+
+  .basket__global-tab_panels
+    .basket__global-tab_panel-content.active#confirm-order
+      .basket__confirm-order.clearfix
+        .basket__confirm-order_column
+          .basket__row
+            .basket__confirm-order_text
+              | Количество товаров: <b>1</b>
+            .basket__confirm-order_text
+              | Стоимость товаров: <b>1 590 p.</b>
+            .basket__confirm-order_text
+              | Стоимость доставки: <b>300 p.</b>
+          .basket__row
+            .basket__confirm-order_total.clearfix
+              .basket__confirm-order_total_left
+                .basket__confirm-order_text
+                  | ИТОГО:
+              .basket__confirm-order_total_right
+                .basket__confirm-order_total_amount
+                  | 3990
+                  span.rub q
+          .basket__row
+            label.basket__label
+              | Ваш комментарий к заказу
+            textarea.basket__text-control(name='comment' rows=4)
+
+        .basket__confirm-order_column
+          .basket__row
+            label.basket__label
+              | Способ доставки:
+            .basket__confirm-order_text(transport-method)
+              | По Москве до транспортной компании
+              br
+              button.link.link_red(type='button' mm-back-step=3)
+                | Изменить
+          .basket__row
+            label.basket__label
+              | Способ оплаты:
+            .basket__confirm-order_text(payment-method)
+              | Оплата безналичным расчётом на карту Сбербанка
+              br
+              button.link.link_red(type='button' mm-back-step=3)
+                | Изменить
+
+
+    .basket__global-tab_next-step
+      button.btn.btn_theme_red.btn_size_m(type='submit')
+        | Оформить заказ

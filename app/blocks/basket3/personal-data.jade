@@ -1,0 +1,51 @@
+mixin personal-data()
+  .basket__global-tab_header.clearfix
+    ul.basket__global-tab_tabs.clearfix(role='tablist')
+      li.basket__global-tab_tabs_item.active
+        a.basket__global-tab_tabs_link(href='#personal-data'
+        aria-controls='personal-data' role='tab' data-toggle='tab')
+          b Личные данные
+
+  .basket__global-tab_panels
+    .basket__global-tab_panel-content.active#personal-data
+      .basket__personal-data.clearfix
+        .basket__personal-data_column
+          .basket__row
+            label.basket__label
+              | Ваш профиль
+            select.basket__select-control(name='your_profile')
+              option(value='profile') Dmitry
+              option(value='profile_2') Ваш профиль 2
+
+        .basket__personal-data_column
+          .basket__row
+            label.basket__label
+              | Фамилия*
+            input.basket__input-control(type='text' name='last_name' data-validation='required')
+            
+          .basket__row
+            label.basket__label
+              | Имя*
+            input.basket__input-control(type='text' name='first_name' data-validation='required')
+            
+          .basket__row
+            label.basket__label
+              | Отчество*
+            input.basket__input-control(type='text' name='middle_name' data-validation='required')
+
+        .basket__personal-data_column
+          .basket__row
+            label.basket__label
+              | E-mail*
+            input.basket__input-control(type='email' name='email' data-validation='email required')
+            span.basket__delete-extra Дополнительный e-mail
+
+          .basket__row
+            label.basket__label
+              | Телефон*
+            input.basket__input-control(type='tel' name='phone' data-validation='length number') 
+            span.basket__delete-extra Дополнительный телефон
+          
+    .basket__global-tab_next-step
+      button.btn.btn_theme_black.btn_size_m(type='button' mm-next-step=3)
+        | Перейти к доставке и оплате

@@ -1,0 +1,45 @@
+include my-basket
+include personal-data
+include delivery-payment
+include confirm-order
+
+mixin basket(noGoods)
+  .basket
+    .basket__steps
+      .basket__steps_item.basket__steps_item_active(mm-step=1)
+        .basket__steps_circle
+        .basket__steps_text
+          | Моя корзина
+      .basket__steps_item(mm-step=2)
+        .basket__steps_circle
+        .basket__steps_text
+          | Личные данные
+      .basket__steps_item(mm-step=3)
+        .basket__steps_circle
+        .basket__steps_text
+          | Доставка и оплата
+      .basket__steps_item(mm-step=4)
+        .basket__steps_circle
+        .basket__steps_text
+          | Подтверждение заказа
+
+    form.basket__form(action='#' method='POST')
+      .basket__global-tab(mm-step-content=1 mm-step-status='active')
+        +my-basket(noGoods)
+      .basket__global-tab(mm-step-content=2)
+        +personal-data()
+      .basket__global-tab(mm-step-content=3)
+        +delivery-payment()
+      .basket__global-tab(mm-step-content=4)
+        +confirm-order()
+
+
+mixin good-item(items)
+  each item in items
+    a.basket__wishlist_item(href='product.html')
+      .basket__wishlist_wrapper
+        .basket__wishlist_image
+          img(src=item.image alt=item.title)
+        .basket__wishlist_title= item.title
+        .basket__wishlist_price= item.price
+          span.rub q

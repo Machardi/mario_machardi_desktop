@@ -1,0 +1,161 @@
+mixin dealers2()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='')=item.orderNumber
+        td
+          =item.date
+        td
+          =item.summa
+        td
+          if (item.status == 1)
+            .status_under=item.status_text
+          else if (item.status == 2)
+            .status_assigned=item.status_text
+          else if (item.status == 3)
+            .status_sent=item.status_text
+        td
+          button.basket__good_remove(type='button')
+            b &times;
+
+  .paa-dealers
+    .paa-registration-requests-one
+      .paa-registration-requests-one__column
+        .paa-managers-manager__name
+          | Смирнова Татьяна Васильевна
+        .paa-managers-manager__data
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Организация
+            .paa-managers-manager__data-content
+              | ООО Пегас
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Город
+            .paa-managers-manager__data-content
+              | Волгодонск
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Адрес магазина
+            .paa-managers-manager__data-content
+              | ул. Морская, 2
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Телефон
+            .paa-managers-manager__data-content
+              | +7 (916) 386 54 46
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | E-mail
+            .paa-managers-manager__data-content
+              a(href='mailto:solomon@mail.ru'): b solomon@mail.ru
+
+
+
+      .paa-registration-requests-one__column
+        .paa-registration-requests-one__data
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label.paa-managers-manager__data-label_small
+              | Менеджер
+            .paa-managers-manager__data-content
+              select.personal-admin-account__select-control(name='group_respondents')
+                option(value='Выберите') Выберите
+                option(value='Выберите2') Выберите 2
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label.paa-managers-manager__data-label_small
+              | Скидка
+            .paa-managers-manager__data-content
+              select.personal-admin-account__select-control(name='group_respondents')
+                option(value='0%') 0%
+                option(value='5%') 5%
+          .paa-managers-manager__data-row.paa-managers-manager__data-row-edit_offset-top
+            button.btn.btn_theme_pale-blue.btn_size_m(type='button')
+              | Сохранить изменения
+
+
+    .paa-dealers__comments
+      .paa-dealers__comments_item
+        .paa-dealers__comments_item-type
+          | Комментарий администратора
+          =' | '
+          a(href='#' add-comment) Редактировать
+        .paa-dealers__comments_item-description
+          | Художественное переживание многопланово образует неизменный художественный ритуал. Возрождение диссонирует глубокий символизм, подобный исследовательский подход к проблемам художественной типологии можно обнаружить у К.Фосслера. Выразительное имеет самодостаточный синтез искусств, таким образом, все перечисленные признаки архетипа и мифа подтверждают, что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Аллегория имеет символизм.
+      .paa-dealers__comments_item
+        .paa-dealers__comments_item-type
+          | Комментарий менеджера
+        .paa-dealers__comments_item-description
+          | Возрождение диссонирует глубокий символизм, подобный исследовательский подход к проблемам художественной типологии можно обнаружить
+          | у К.Фосслера. Выразительное имеет самодостаточный синтез искусств, таким образом, все перечисленные признаки архетипа и мифа подтверждают,
+          | что действие механизмов мифотворчества сродни механизмам художественно-продуктивного мышления. Аллегория имеет символизм.
+
+
+    .distribution__row.personal-area__submit
+      button.btn.btn_theme_black.btn_size_m(type='button' add-comment)
+        | Добавить комментарий
+      button.btn.btn_theme_black.btn_size_m(type='button')
+        | Распечатать
+
+
+    table.personal-admin-account__table.delete
+      tr
+        th(width='25%')
+          span(sort-table)
+            | № заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th
+          span(sort-table)
+            | дата заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='25%')
+          span(sort-table)
+            | cумма заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='25%')
+          span(sort-table)
+            | статус заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='5%')
+          | удалить
+      +table-tr([{
+        orderNumber: '0000001',
+        date: '10.12.2016',
+        summa: '75 000',
+        status: 1,
+        status_text: 'Присвоить статус'
+      }, {
+        orderNumber: '0000002',
+        date: '10.12.2016',
+        summa: '75 000',
+        status: 2,
+        status_text: 'На рассмотрении'
+      }, {
+        orderNumber: '0000003',
+        date: '10.12.2016',
+        summa: '75 000',
+        status: 3,
+        status_text: 'Отправлен 01.11.2016'
+      }, {
+        orderNumber: '0000004',
+        date: '10.12.2016',
+        summa: '75 000',
+        status: 3,
+        status_text: 'Отправлен 01.11.2016'
+      }])
+
+    .paa-dealers__modal
+      .paa-dealers__modal_wrapper
+        .paa-dealers__modal_title
+          | Комментарий администратора
+        .paa-dealers__modal_textarea
+          textarea(name='comment')
+        .paa-dealers__modal_buttons
+          button.btn.btn_theme_pale-blue.btn_size_m(type='button' close-modal-comment)
+            | Сохранить
+          button.btn.btn_theme_black.btn_size_m(type='button' close-modal-comment)
+            | Отменить

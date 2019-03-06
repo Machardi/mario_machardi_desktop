@@ -1,0 +1,81 @@
+mixin managers2()
+  form.paa-managers(action='?' method='POST')
+    .paa-managers-manager
+      .paa-managers-manager__photo
+        img(src='uploads/img_1_2.jpg')
+      .paa-managers-manager__content
+        .paa-managers-manager__name
+          | Телингатер Соломон Бенедиктович
+        .paa-managers-manager__data
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Телефон
+            .paa-managers-manager__data-content
+              | +7 (916) 386 54 46
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | E-mail
+            .paa-managers-manager__data-content
+              a(href='mailto:solomon@mail.ru'): b solomon@mail.ru
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Домашний адрес
+            .paa-managers-manager__data-content
+              | Москва, ул. Дружинников, 5а, кв.161
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Адрес магазина
+            .paa-managers-manager__data-content
+              | ул. Морская, 2
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Дополнительная информация
+            .paa-managers-manager__data-content
+              | Испытательный срок заканчивается в феврале 2017. Если пройдет успешно - просит отправить его на курсы повышения квалификации.
+
+      .paa-managers-manager__edit
+        .paa-managers-manager__data
+          .paa-managers-manager__data-row-edit.paa-managers-manager__data-row-edit_offset-bottom
+            .paa-managers-manager__data-label
+              | ФИО
+            .paa-managers-manager__data-edit
+              input(type='text' value='Телингатер Соломон Бенедиктович')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Телефон
+            .paa-managers-manager__data-edit
+              input(type='text' value='+7 (916) 386 54 46')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | E-mail
+            .paa-managers-manager__data-edit
+              input(type='text' value='solomon@mail.ru')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Домашний адрес
+            .paa-managers-manager__data-edit
+              input(type='text' value='Москва, ул. Дружинников, 5а, кв.16')
+          .paa-managers-manager__data-row-edit
+            .paa-managers-manager__data-label
+              | Дополнительная информация
+            .paa-managers-manager__data-edit
+              textarea(name='additional-info')
+                | Испытательный срок заканчивается в феврале 2017. Если пройдет успешно - просит отправить его на курсы повышения квалификации.
+          .paa-managers-manager__data-row-edit.paa-managers-manager__data-row-edit_offset-top
+            .paa-managers-manager__data-label
+              | Фотография
+            .paa-managers-manager__data-edit
+              .personal-admin-account__file-choose
+                input.personal-admin-account__file-choose_file(type='file')
+                input.personal-admin-account__file-choose_field(type='text')
+                button.personal-admin-account__file-choose_btn.btn.btn_theme_black.btn_size_s(type='button')
+                  | Обзор
+
+
+    .distribution__row.personal-area__submit
+      button.btn.btn_theme_black.btn_size_m(type='button' edit-manager)
+        | Редактировать
+      button.btn.btn_theme_black.btn_size_m(type='button' save-manager-edit)
+        | Сохранить
+      button.btn.btn_theme_black.btn_size_m(type='button' cancel-manager-edit)
+        | Отменить

@@ -1,0 +1,114 @@
+mixin orders1()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='#')
+          span.name=item.name
+          .pma-orders__detail-product
+            .pma-orders__detail-product_content
+              .pma-orders__detail-product_photo
+                img(src=item.photoSrc)
+              .pma-orders__detail-product_info
+                .pma-orders__detail-product_info-group
+                  .pma-orders__detail-product_info-label Бренд
+                  .pma-orders__detail-product_info-content= item.brandName
+
+                .pma-orders__detail-product_info-group
+                  .pma-orders__detail-product_info-label Коллекция
+                  .pma-orders__detail-product_info-content= item.collection
+
+                .pma-orders__detail-product_info-group
+                  .pma-orders__detail-product_info-label Артикул
+                  .pma-orders__detail-product_info-content= item.article
+
+                .pma-orders__detail-product_info-group
+                  .pma-orders__detail-product_info-label Размер
+                  .pma-orders__detail-product_info-content= item.size
+        td
+          =item.count
+        td
+          =item.price
+
+  .paa-registration-requests.pma-orders
+    .pma-orders__header
+      .pma-orders__header_column
+        .pma-orders__order-number №10200002
+        .pma-orders__order-status
+          label Статус заказа:
+          select.basket__select-control(name='order_status')
+            option(value='Находится на рассмотрении') Находится на рассмотрении
+            option(value='Находится на рассмотрении2') Находится на рассмотрении 2
+      .pma-orders__header_column
+        .pma-orders__table-option
+          span(table-toggle-view='false')
+            span Развернуть таблицу
+            i.fa.fa-angle-down.no-print
+
+    table.personal-admin-account__table
+      tr
+        th
+          span(sort-table)
+            | Заказанные товары
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='12%')
+          span(sort-table)
+            | Количество
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='12%')
+          span(sort-table)
+            | Сумма заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+      +table-tr([{
+          name: 'Сорочка Webermann LS 102',
+          count: 1,
+          price: '10 000',
+          photoSrc: 'uploads/img_5.jpg',
+          brandName: 'Mario Machardi',
+          collection: 'Slim Fit',
+          article: 'SF 001',
+          size: 'Сетка №1'
+      }, {
+          name: 'Сорочка Mario Machardi  CL 1009',
+          count: 2,
+          price: '22 000',
+          photoSrc: 'uploads/img_6.jpg',
+          brandName: 'Mario Machardi',
+          collection: 'Slim Fit',
+          article: 'SF 001',
+          size: 'Сетка №1'
+      }, {
+          name: 'Сорочка Webermann LS 102',
+          count: 1,
+          price: '10 000',
+          photoSrc: 'uploads/img_5.jpg',
+          brandName: 'Mario Machardi',
+          collection: 'Slim Fit',
+          article: 'SF 001',
+          size: 'Сетка №1'
+      }, {
+          name: 'Сорочка Mario Machardi  CL 1009',
+          count: 2,
+          price: '22 000',
+          photoSrc: 'uploads/img_7.jpg',
+          brandName: 'Mario Machardi',
+          collection: 'Slim Fit',
+          article: 'SF 001',
+          size: 'Сетка №1'
+      }])
+
+    .pma-orders__total
+      | Итого:
+      =' '
+      b 8 000
+
+    .distribution__row.personal-area__submit
+      button.btn.btn_theme_black.btn_size_m(type='button')
+        | Распечатать
+      button.btn.btn_theme_black.btn_size_m(type='button')
+        | Сохранить в pdf
+      button.btn.btn_theme_black.btn_size_m(type='button')
+        | Отправить на email

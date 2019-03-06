@@ -1,0 +1,31 @@
+// mixins for breadcrumbs
+// back_button - показывает стрелку назад
+// parent_page_1 - страница 1 уровня
+// inner_parents - массив элементов для вывода родительских страниц которые идут между
+//                  текущей и родительской страницей 1 уровня
+// page_title - заголовок страницы, задается в элементе массива inner_parents
+// current_page - текущая страница на которое находимся
+
+mixin breadcrumbs(objectStructure)
+  // Хлебные крошки
+  // TODO: родительские страницы задаются тегом 'a' и добавляется атрибут 'href'
+  // со ссылкой на страницу
+  // активная страница отмечается тегом 'span'
+  // если в реализации подобной структуры возникает сложность, то можно для активной страницы
+  // оставить тег 'a'
+  mixin tools(list)
+    each item in list
+      .breadcrumbs__item
+        a.breadcrumbs__link(href='#')= item.page_title
+
+  .breadcrumbs
+    if (objectStructure.back_button)
+      .breadcrumbs__back: a.breadcrumbs__back_link(href='#'): .icons.icons__arrow-back
+
+    if (objectStructure.parent_page_1)
+      .breadcrumbs__item: a.breadcrumbs__link(href='#')= objectStructure.parent_page_1
+
+    if (objectStructure.inner_parents)
+      +tools(objectStructure.inner_parents)
+
+    .breadcrumbs__item: span.breadcrumbs__link= objectStructure.current_page

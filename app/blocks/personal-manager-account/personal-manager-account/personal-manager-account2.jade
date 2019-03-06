@@ -1,0 +1,37 @@
+include ../dealers/dealers2
+include ../orders/orders1
+include ../search-orders/search-orders
+include ../distribution/distribution
+include ../contacts/contacts
+
+mixin personal-manager-account2()
+  .personal-admin-account.personal-area
+    .personal-area__tabs
+      ul.personal-area__tabs_items.clearfix
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#dealers'
+        aria-controls='dealers' role='tab' data-toggle='tab'): b
+            | Дилеры
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#orders'
+        aria-controls='orders' role='tab' data-toggle='tab'): b
+            | Заказы
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#search-orders'
+        aria-controls='search-orders' role='tab' data-toggle='tab'): b
+            | Поиск заказов
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#distribution'
+        aria-controls='distribution' role='tab' data-toggle='tab'): b
+            | Рассылка
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#contacts'
+        aria-controls='contacts' role='tab' data-toggle='tab'): b
+            | Контакты
+
+      .personal-area__tabs_panels
+        .personal-area__tabs_panel-content#dealers
+          +dealers2()
+        .personal-area__tabs_panel-content#orders
+          +orders1()
+        .personal-area__tabs_panel-content#search-orders
+          +search-orders()
+        .personal-area__tabs_panel-content#distribution
+          +distribution()
+        .personal-area__tabs_panel-content#contacts
+          +contacts()

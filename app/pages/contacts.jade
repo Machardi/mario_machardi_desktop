@@ -1,0 +1,24 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/contacts/contacts
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Контакты';
+  - var pageId = 'contacts';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +breadcrumbs({
+      parent_page_1: 'О компании',
+      current_page: 'Контакты'
+    })
+    +contacts()
+    +footer()

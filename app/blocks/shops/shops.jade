@@ -1,0 +1,200 @@
+mixin alphabetItems(array)
+  each item in array
+    a.shops__alphabet_item(href='#')= item
+
+mixin shopCity(options)
+  .shops__info-shop_item
+    button.shops__info-shop_city-shop-btn.btn(type='button' toggle-info-shop)
+      = options.cityName
+      i.fa.fa-angle-down
+    .shops__info-shop_wrapper
+      .shops__info-shop_content
+        .shops__info-shop_group-content
+          .shops__info-shop_title
+            | Франт
+          .shops__info-shop_text
+            | ул. Парижской Комунны, 31
+        .shops__info-shop_group-content
+          .shops__info-shop_title
+            | ТК квант
+          .shops__info-shop_text
+            | ул. Красной Армии, 10
+        .shops__info-shop_group-content
+          .shops__info-shop_title
+            | Мужская одежда
+          .shops__info-shop_text
+            | ул. Взлетная, 5 стр.1
+        .shops__info-shop_group-content
+          .shops__info-shop_title
+            | SEWROY
+          .shops__info-shop_text
+            | ТЦ Июнь
+        .shops__info-shop_group-content
+          .shops__info-shop_title
+            | Для мужчин все
+          .shops__info-shop_text
+            | ТЦ Квант
+      // TODO: информация по созданию yandex карт: https://tech.yandex.ru/maps/jsbox/2.1/object_manager
+      // Для того чтобы подгрузить данные в карту необходимо сгенерировать объект с данными для каждого города
+      // пример объект можно найти ниже + читать доку yandex maps
+
+      // Ключ объекта должен соответствовать значению идентификатора карты 'id'
+
+      // PS: если в bitrix есть уже готовая реализация, то рекомендую использовать ее, т.к не думаю, что моя реализация
+      // подходит под bitrix
+      .shops__info-shop_map(id=options.idMap style='width: 100%; height: 330px')
+
+mixin shops()
+  // Магазины
+  .shops
+    .shops__alphabet
+      a.shops__alphabet_all(href='#')
+        | Все
+      .shops__alphabet_items.clearfix
+        +alphabetItems(['а', 'б', 'в', 'г', 'д', 'е', 'ё', 'ж', 'з', 'и', 'к', 'л', 'м', 'н', 'о', 'п', 'р', 'с', 'т'])
+
+    .shops__info-shop.clearfix
+      .shops__info-shop_column
+        +shopCity({cityName: 'Апатиты', idMap: 'map_1'})
+        +shopCity({cityName: 'Архангельск', idMap: 'map_2'})
+        +shopCity({cityName: 'Астана', idMap: 'map_3'})
+        +shopCity({cityName: 'Балашиха', idMap: 'map_4'})
+        +shopCity({cityName: 'Барнаул', idMap: 'map_5'})
+        +shopCity({cityName: 'Брянск', idMap: 'map_6'})
+        +shopCity({cityName: 'Владивосток', idMap: 'map_7'})
+        +shopCity({cityName: 'Владимир', idMap: 'map_8'})
+        +shopCity({cityName: 'Горно-Алтайск', idMap: 'map_9'})
+        +shopCity({cityName: 'Дзержинск', idMap: 'map_10'})
+        +shopCity({cityName: 'Жуковский', idMap: 'map_11'})
+        +shopCity({cityName: 'Иваново', idMap: 'map_12'})
+        +shopCity({cityName: 'Ижевск', idMap: 'map_13'})
+        +shopCity({cityName: 'Истра', idMap: 'map_14'})
+        +shopCity({cityName: 'Казань', idMap: 'map_15'})
+        +shopCity({cityName: 'Камышин', idMap: 'map_16'})
+
+      .shops__info-shop_column
+        +shopCity({cityName: 'Ковров', idMap: 'map_17'})
+        +shopCity({cityName: 'Красногорск', idMap: 'map_18'})
+        +shopCity({cityName: 'Красноярск', idMap: 'map_19'})
+        +shopCity({cityName: 'Липецк', idMap: 'map_20'})
+        +shopCity({cityName: 'Москва', idMap: 'map_21'})
+        +shopCity({cityName: 'Мурманс', idMap: 'map_22'})
+        +shopCity({cityName: 'Мытищи', idMap: 'map_23'})
+        +shopCity({cityName: 'Набережные Челны', idMap: 'map_24'})
+        +shopCity({cityName: 'Санкт-Петербург', idMap: 'map_25'})
+        +shopCity({cityName: 'Северодвинск', idMap: 'map_26'})
+        +shopCity({cityName: 'Сочи', idMap: 'map_27'})
+        +shopCity({cityName: 'Тверь', idMap: 'map_28'})
+        +shopCity({cityName: 'Улан-Удэ', idMap: 'map_29'})
+        +shopCity({cityName: 'Усинск', idMap: 'map_30'})
+        +shopCity({cityName: 'Ухта', idMap: 'map_31'})
+        +shopCity({cityName: 'Чита', idMap: 'map_32'})
+
+      .shops__info-shop_column
+        +shopCity({cityName: 'Нижневартовск', idMap: 'map_33'})
+        +shopCity({cityName: 'Нижний Новгород', idMap: 'map_34'})
+        +shopCity({cityName: 'Новомосковск', idMap: 'map_35'})
+        +shopCity({cityName: 'Новосибирск', idMap: 'map_36'})
+        +shopCity({cityName: 'Омск', idMap: 'map_37'})
+        +shopCity({cityName: 'Пенза', idMap: 'map_38'})
+        +shopCity({cityName: 'Петрозаводск', idMap: 'map_39'})
+        +shopCity({cityName: 'Подольск', idMap: 'map_40'})
+        +shopCity({cityName: 'Раменское', idMap: 'map_41'})
+        +shopCity({cityName: 'Реутов', idMap: 'map_42'})
+        +shopCity({cityName: 'Ростов-на-Дону', idMap: 'map_43'})
+        +shopCity({cityName: 'Рязань', idMap: 'map_44'})
+        +shopCity({cityName: 'Санкт-Петербург', idMap: 'map_45'})
+        +shopCity({cityName: 'Северодвинск', idMap: 'map_46'})
+        +shopCity({cityName: 'Сочи', idMap: 'map_47'})
+        +shopCity({cityName: 'Тверь', idMap: 'map_48'})
+
+
+  script.
+    var exampleStructureObjMap = {
+      // Сюда нужно вывести координаты к которым будет центрирована карта
+      center: [55.76, 37.64],
+      // Сюда вывести размер зума
+      zoom: 8,
+      map_data: {
+        type: 'FeatureCollection',
+        features: [
+          {
+            type: 'Feature',
+            id: 0,
+            // Здесь нужно в параметр 'coordinates' подставить координаты
+            geometry: {type: 'Point', coordinates: [55.831903, 37.411961]},
+            properties: {
+              // Здесь нужно в параметр 'balloonContent', 'clusterCaption', 'hintContent'
+              // Подставить данные которые будут выводиться при ховере и клике на метку
+              balloonContent: 'Содержимое балуна',
+              clusterCaption: 'Еще одна метка',
+              hintContent: 'Текст подсказки'
+            }
+          },
+          {
+            type: 'Feature',
+            id: 1,
+            // Здесь нужно в параметр 'coordinates' подставить координаты
+            geometry: {type: 'Point', coordinates: [55.763338, 37.565466]},
+            properties: {
+              // Здесь нужно в параметр 'balloonContent', 'clusterCaption', 'hintContent'
+              // Подставить данные которые будут выводиться при ховере и клике на метку
+              balloonContent: 'Содержимое балуна',
+              clusterCaption: 'Еще одна метка',
+              hintContent: 'Текст подсказки'
+            }
+          }
+        ]
+      }
+    };
+
+    var mapsData = {
+      map_1: exampleStructureObjMap,
+      map_2: exampleStructureObjMap,
+      map_3: exampleStructureObjMap,
+      map_4: exampleStructureObjMap,
+      map_5: exampleStructureObjMap,
+      map_6: exampleStructureObjMap,
+      map_7: exampleStructureObjMap,
+      map_8: exampleStructureObjMap,
+      map_9: exampleStructureObjMap,
+      map_10: exampleStructureObjMap,
+      map_11: exampleStructureObjMap,
+      map_12: exampleStructureObjMap,
+      map_13: exampleStructureObjMap,
+      map_14: exampleStructureObjMap,
+      map_15: exampleStructureObjMap,
+      map_16: exampleStructureObjMap,
+      map_17: exampleStructureObjMap,
+      map_18: exampleStructureObjMap,
+      map_19: exampleStructureObjMap,
+      map_20: exampleStructureObjMap,
+      map_21: exampleStructureObjMap,
+      map_22: exampleStructureObjMap,
+      map_23: exampleStructureObjMap,
+      map_24: exampleStructureObjMap,
+      map_25: exampleStructureObjMap,
+      map_26: exampleStructureObjMap,
+      map_27: exampleStructureObjMap,
+      map_28: exampleStructureObjMap,
+      map_29: exampleStructureObjMap,
+      map_30: exampleStructureObjMap,
+      map_31: exampleStructureObjMap,
+      map_32: exampleStructureObjMap,
+      map_33: exampleStructureObjMap,
+      map_34: exampleStructureObjMap,
+      map_35: exampleStructureObjMap,
+      map_36: exampleStructureObjMap,
+      map_37: exampleStructureObjMap,
+      map_38: exampleStructureObjMap,
+      map_39: exampleStructureObjMap,
+      map_40: exampleStructureObjMap,
+      map_41: exampleStructureObjMap,
+      map_42: exampleStructureObjMap,
+      map_43: exampleStructureObjMap,
+      map_44: exampleStructureObjMap,
+      map_45: exampleStructureObjMap,
+      map_46: exampleStructureObjMap,
+      map_47: exampleStructureObjMap,
+      map_48: exampleStructureObjMap,
+    };

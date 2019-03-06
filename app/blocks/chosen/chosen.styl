@@ -1,0 +1,85 @@
+.chosen-container-single .chosen-single
+  background white
+  border: 1px solid #e5e5e5;
+  border-radius 0
+  box-shadow none
+  color black
+  font-size 16px
+  font-weight 100
+  height 40px
+  padding 8px 10px
+  display flex
+  align-items center
+  justify-content center
+
+.chosen-container-active.chosen-with-drop .chosen-single
+  background #fff
+  border: 1px solid #e5e5e5;
+  border-radius 0
+  box-shadow none
+
+.chosen-container-single .chosen-single span
+  display inline-block
+  vertical-align middle
+  margin-right 0px
+  width 100%
+  text-align: center
+
+div[mm-step-content="2"],
+div[mm-step-content="3"]
+  .chosen-container-single .chosen-single span
+    text-align: left
+
+.chosen-container-single .chosen-single div
+  display inline-block
+  retinaSprite($arrow_chosen_down_group)
+  position relative
+  width 16px
+  vertical-align middle
+
+.chosen-container-active.chosen-with-drop .chosen-single div
+  retinaSprite($arrow_chosen_up_group)
+  width 16px
+
+.chosen-container .chosen-drop
+  background #fff
+  border: 1px solid #e5e5e5;
+  border-radius 0
+  box-shadow none
+
+.chosen-container-single .chosen-search input[type=text]
+  background white
+  border none
+  display none
+  padding 10px
+
+.chosen-container .chosen-results
+  margin 0
+  padding 0
+
+.chosen-container .chosen-results li
+  border-bottom 1px solid alpha(black, 0.1)
+  font-size 15px
+  font-weight 300
+  padding 10px
+  transition background 0.15s ease-out
+  text-align: center
+
+  &:last-child
+    border-bottom none
+
+.chosen-container .chosen-results li.highlighted
+  background alpha(#0096ff, 0.7)
+
+.chosen-container .chosen-results li.result-selected
+  background #0096ff
+  color white
+
+.chosen-container .chosen-results li.no-results
+  font-size 13px
+  font-weight 100
+
+.chosen-container-single .chosen-single abbr,
+.chosen-container-single .chosen-single div b,
+.chosen-container-multi .chosen-choices li.search-choice .search-choice-close
+  background none

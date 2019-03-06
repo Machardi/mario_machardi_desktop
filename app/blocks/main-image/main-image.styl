@@ -1,0 +1,121 @@
+$paddingOffset = 4px
+$paddingInner = 40px
+
+.main-image
+  margin-top -26px
+  max-height 750px
+  min-height 550px
+  position relative
+
+  &__large-title
+    color black
+    font-size 40px
+    font-weight 100
+    line-height 44px
+    position relative
+    z-index 1
+
+  &__medium-title
+    color black
+    display inline-block
+    font-size 21px
+    font-weight 100
+    line-height 25px
+
+    &_white
+      color white
+
+  &__xl-title
+    color black
+    font-size 29px
+    font-weight 100
+    line-height 33px
+
+    &_white
+      color white
+
+  &__item
+    background-color white
+    overflow hidden
+    position absolute
+
+    &_wrapper
+      background-color #ecf0f5
+      height 100%
+      padding 33px $paddingInner
+      position relative
+      width 100%
+
+    &_50perc-resize
+      height calc(100% - 250px)
+      padding-right $paddingOffset
+      width 50%
+
+      &_image
+        height 100%
+        top 0
+        position absolute
+        right 0
+        width 100%
+
+        & img
+          height auto
+          max-width 100%
+
+    &_230pix-notresize
+      height calc(100% - 250px)
+      left 50%
+      width 230px
+
+      & .main-image__medium-title
+        bottom 35px
+        position absolute
+
+    &_470pix-notresize
+      height 100%
+      left calc(50% + 230px)
+      padding-left $paddingOffset
+      width calc(50% - 230px)
+
+      &_vertical-image
+        bottom 40px
+        left 0
+        padding 0 40px
+        position absolute
+        width 100%
+
+        & img
+          height auto
+          max-width 100%
+
+    &_930del2perc-resize
+      height 250px
+      top calc(100% - 250px)
+      padding-top $paddingOffset
+      width calc((50% + 230px) / 2)
+
+      &_side
+        padding-left $paddingOffset
+        left calc((50% + 230px) / 2)
+
+        & .main-image__medium-title
+          float right
+
+      &_image
+        bottom 0
+        height 100%
+        left 0
+        position absolute
+        width 100%
+
+        & img
+          bottom 0
+          height auto
+          left 0
+          max-width 100%
+          position absolute
+
+      & .logos__official-logo_black
+        bottom 40px
+        position absolute
+        right 40px

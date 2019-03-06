@@ -1,0 +1,78 @@
+.pma-search-orders
+  padding 70px 40px 0
+
+  &__form
+    & label
+      font-size 18px
+      font-weight 100
+
+    & input
+      font-size 14px
+      font-weight 300
+      padding 3px 10px
+      width 335px
+
+    &_content
+      display flex
+
+    &_column
+      &:nth-child(1)
+        width 565px
+
+        & label
+          width 130px
+
+      &:nth-child(2)
+        width 565px
+
+        & label
+          width 160px
+
+    &_group
+      margin-bottom 20px
+
+      &_order-number
+        & input
+          width 130px
+
+      &_submit
+        margin-top 80px
+
+  &__warning
+    color #d10909
+    font-size 16px
+    font-weight 100
+    margin-top 50px
+    text-align center
+
+  &__finded
+    border-top 1px solid #f1f4f8
+    font-size 16px
+    font-weight 100
+    margin 40px 0 50px
+    padding 30px 0
+
+  & .date-select + .chosen-container
+    margin-right 7px
+    width 85px !important
+
+  & .month-select + .chosen-container
+    margin-right 10px
+    width 125px !important
+
+  & .year-select + .chosen-container
+    width 105px !important
+
+  & .personal-admin-account__select-control + .chosen-container .chosen-single
+    font-size 12px
+
+  & .personal-admin-account__table
+    & .status
+      color #0096ff
+
+      &_under
+        color #0096ff
+
+      &_sent
+        color #46963d
+        font-weight 700

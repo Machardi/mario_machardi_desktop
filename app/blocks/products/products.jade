@@ -1,0 +1,284 @@
+mixin productsItems(options)
+  .products__group
+    .products__group_title.global-blocks-title
+      span.global-blocks-title_text= options.group_name
+    .products__slider.clearfix
+      each item in options.items
+        a.products__slider_item(href='product.html')
+          .products__slider_image
+            img(src=item.image alt=item.title)
+          .products__slider_title= item.title
+          .products__slider_price= item.price
+            span.rub q
+
+mixin products()
+  // Продукция
+  .products
+    +productsItems({
+      group_name: 'Сорочки',
+      items: [{
+        image: 'uploads/img_2.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_3.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_4.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_5.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_6.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_7.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_5.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_6.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_7.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })
+    +productsItems({
+      group_name: 'Галстуки',
+      items: [{
+        image: 'uploads/img_9.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_10.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_11.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_12.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_13.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_14.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_12.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_13.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_14.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })
+    +productsItems({
+      group_name: 'Пластроны',
+      items: [{
+        image: 'uploads/img_15.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_16.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_17.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_18.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_19.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_20.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_18.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_19.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_20.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })
+    +productsItems({
+      group_name: 'Жилеты',
+      items: [{
+        image: 'uploads/img_21.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_22.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_23.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_24.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_25.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_26.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_24.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_25.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_26.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })
+    +productsItems({
+      group_name: 'Бабочки',
+      items: [{
+        image: 'uploads/img_27.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_28.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_29.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_30.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_31.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_32.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_30.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_31.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_32.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })
+    +productsItems({
+      group_name: 'Подтяжки',
+      items: [{
+        image: 'uploads/img_33.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_34.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_35.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_36.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_37.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_38.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_36.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_37.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_38.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })
+    +productsItems({
+      group_name: 'Запонки',
+      items: [{
+        image: 'uploads/img_39.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_40.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_41.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_42.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_43.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }, {
+        image: 'uploads/img_44.jpg',
+        title: 'Non Iron | SFEL122kom',
+        price: 3990
+      }]
+    })

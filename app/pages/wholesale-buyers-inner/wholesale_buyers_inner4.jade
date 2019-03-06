@@ -1,0 +1,29 @@
+include ../../blocks/header/header
+include ../../blocks/topmenu/topmenu
+include ../../blocks/topmenu-sticky/topmenu-sticky
+include ../../blocks/breadcrumbs/breadcrumbs
+include ../../blocks/wholesale-buyers-inner/wholesale-buyers-inner
+include ../../blocks/wholesale-buyers/wholesale-buyers-page
+include ../../blocks/footer/footer
+
+extends ../../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Оптовым покупателям - Жилеты';
+  - var pageId = 'wholesale-buyers-inner4';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +breadcrumbs({
+      parent_page_1: 'Оптовым покупателям',
+      current_page: 'Жилеты'
+    })
+    +wholesale-buyers-inner({
+      title: 'Жилеты',
+      image: '/images/wholesale_buyers/photo/img_4.jpg'
+    })
+    +wholesale-buyers-page(false)
+    +footer()

@@ -1,0 +1,81 @@
+.paa-managers-manager
+  display flex
+  padding-top 20px
+
+  &__photo
+    border-radius 50%
+    height 255px
+    overflow hidden
+    width 255px
+
+    & img
+      height auto
+      max-width 100%
+
+  &__content,
+  &__edit
+    margin-left 110px
+    max-width 660px
+    width 100%
+
+    &:nth-child(1)
+      margin-left 0
+
+  &__edit
+    display none
+
+  &__name
+    font-size 24px
+    font-weight 700
+    margin-bottom 44px
+
+  &__data-row
+    display flex
+    margin 14px 0
+    align-items baseline
+
+  &__data-row-edit
+    display flex
+    margin 8px 0
+
+    &_offset-bottom
+      margin-bottom 40px
+
+    &_offset-top
+      margin-top 35px
+
+  &__data-label
+    font-size 16px
+    font-weight 100
+    width 220px
+
+    &_small
+      font-size 14px
+      font-weight 700
+      width 110px
+
+  &__data-content
+    font-size 16px
+    font-weight 700
+    width calc(100% - 220px)
+
+    & a
+      color #0096ff
+
+    & a:hover
+      text-decoration underline
+
+  &__data-edit
+    width 350px
+
+    & > input,
+    & > textarea
+      border 1px solid #e5e5e5
+      font-size 12px
+      font-weight 100
+      padding 6px 10px
+      width 100%
+
+    & > textarea
+      height 100px
+      resize vertical

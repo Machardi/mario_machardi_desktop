@@ -1,0 +1,84 @@
+mixin my-orders()
+  .personal-area-my-orders
+    table.personal-area-my-orders__table
+      tr
+        th(width='10%')
+          span(sort-table)
+            | № Заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+          form.personal-area-my-orders__search(action='?' method='POST')
+            input.personal-area-my-orders__search_field(type='search' name='q')
+        th(width='16.5%')
+          span(sort-table)
+            | Статус заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+          form.personal-area-my-orders__search(action='?' method='POST')
+            input.personal-area-my-orders__search_field(type='search' name='q')
+        th(width='18%')
+          | Заказ
+        th(width='8%')
+          | Сетка, размер
+        th(width='7.5%')
+          span(sort-table)
+            | Сумма
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='10%')
+          | Доставка
+        th(width='20%')
+          | Комментарий
+        th(width='10%')
+          span(sort-table)
+            | Итого
+            =' '
+            i.fa.fa-angle-down.no-print
+      tr
+        td
+          span(hide-image='true')
+            i.fa.fa-angle-down.no-print
+            | 01
+        td
+          p 06.07.15  13:00  Новый
+          p 06.07.15  13:10  Подтвержден
+          p 06.07.15  13:20  Собирается
+          p 06.07.15  13:30  Готовится к отправке
+          p 06.07.15  13:40  Готово
+        td(colspan=2)
+          p.good
+            span.good__good
+              | Cорочка Mario Machardi  |  CL337KOM
+              br
+              span.good__old-price 2200 Р
+              =' '
+              span.good__new-price 1800 Р
+              =' '
+              b x 1000 шт
+            span.good__size
+              | SF1 - 12
+          .good__image
+            img(src='uploads/img_4.jpg')
+          p.good
+            span.good__good
+              | Cорочка Mario Machardi  |  CL337KOM
+              br
+              b 1800 Р x 1000 шт
+            span.good__size
+              | SF1 - 12
+          .good__image
+            img(src='uploads/img_2.jpg')
+        td
+          | 1 800 000 Р
+        td
+          | 1 000 Р
+          br
+          | Грузовая компания:
+          br
+          | Санкт-Петербург
+        td
+          | Пожалуйста, проследите, чтобы все коробки были упакованы  в дополнительный слой изоляции,  не то они опять помнутся, как  в прошлый раз. Придется опять оформлять возврат. Спасибо
+        td
+          b 1 801 000 Р
+          br
+          | Ожидает оплаты

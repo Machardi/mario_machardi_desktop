@@ -1,0 +1,125 @@
+mixin search-orders()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='')=item.fio
+          br
+          span=item.company
+        td
+          a(href='')=item.orderNumber
+        td
+          =item.summa
+        td
+          if (item.status == 1)
+            .status_under=item.status_text
+          else if (item.status == 2)
+            .status_assigned=item.status_text
+          else if (item.status == 3)
+            .status_sent=item.status_text
+
+  .pma-search-orders
+    form.pma-search-orders__form(action='?' method='POST')
+      .pma-search-orders__form_content
+        .pma-search-orders__form_column
+          .pma-search-orders__form_group.pma-search-orders__form_group_order-number
+            label По № заказа
+            input(type='text' name='order_number')
+          .pma-search-orders__form_group
+            label По фамилии
+            input(type='text' name='last_name')
+
+        .pma-search-orders__form_column
+          .pma-search-orders__form_group
+            label По дате заказа
+            select.personal-admin-account__select-control.date-select(name='date')
+              option(value='01') 01
+              option(value='02') 02
+              option(value='05') 03
+              option(value='04') 04
+            select.personal-admin-account__select-control.month-select(name='month')
+              option(value='Декабрь') Декабрь
+              option(value='Январь') Январь
+              option(value='Февраль') Февраль
+            select.personal-admin-account__select-control.year-select(name='year')
+              option(value='2017') 2017
+              option(value='2016') 2016
+              option(value='2015') 2015
+          .pma-search-orders__form_group
+            label По организации
+            input(type='text' name='company')
+          .pma-search-orders__form_group.pma-search-orders__form_group_submit
+            button.btn.btn_theme_black.btn_size_m(type='submit')
+              | Искать
+
+      .pma-search-orders__warning
+        | По вашему запросу ничего не найдено. Попробуйте еще раз.
+
+    .pma-search-orders__finded
+      b Найдено:
+      =' '
+      | 4
+
+    table.personal-admin-account__table
+      tr
+        th(width='35%')
+          span(sort-table)
+            | ФИО
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='21%')
+          span(sort-table)
+            | № Заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='21%')
+          span(sort-table)
+            | Сумма заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='21%')
+          span(sort-table)
+            | Статус заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+      +table-tr([{
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000001',
+          summa: '75 000',
+          status: 1,
+          status_text: 'Присвоить статус'
+      }, {
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000002',
+          summa: '75 000',
+          status: 2,
+          status_text: 'На рассмотрении'
+      }, {
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000003',
+          summa: '75 000',
+          status: 3,
+          status_text: 'Отправлен 01.11.2016'
+      }, {
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000004',
+          summa: '75 000',
+          status: 3,
+          status_text: 'Отправлен 01.11.2016'
+      }])
+
+    .paa-dealers__modal
+      .paa-dealers__modal_wrapper
+        .paa-dealers__modal_title
+          | Комментарий администратора
+        .paa-dealers__modal_textarea
+          textarea(name='comment')
+        .paa-dealers__modal_buttons
+          button.btn.btn_theme_pale-blue.btn_size_m(type='button' close-modal-comment)
+            | Сохранить
+          button.btn.btn_theme_black.btn_size_m(type='button' close-modal-comment)
+            | Отменить

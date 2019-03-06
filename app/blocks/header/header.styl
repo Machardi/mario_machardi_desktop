@@ -1,0 +1,57 @@
+.header
+  margin-bottom 30px
+  padding 36px 0 0
+  display -webkit-flex
+  display -moz-flex
+  display -ms-flex
+  display -o-flex
+  display flex
+  justify-content center
+  align-items center
+  position: relative
+
+  &__top-bullet
+    margin-bottom 0
+
+  &__tagline
+    float left
+    font-size 14px
+    font-weight 100
+    width 130px
+
+  &__search
+    position absolute
+    right 0
+    top 51%
+
+    &_field
+      border 1px solid #e1e1e1
+      font-family $museo
+      font-size 15px
+      font-weight 300
+      padding 4px 10px
+      width 230px
+
+    &_submit
+      background-color transparent
+      border none
+      bottom 0
+      margin auto 0
+      padding 0
+      position absolute
+      retinaSprite($search_loup_group)
+      right 10px
+      top 0
+  &__phone
+    font-size 16px
+    font-weight 300
+    width 130px
+    
+  &__logo
+    display block
+    width 180px
+    height auto
+    margin 0 110px
+    img 
+      width 180px
+      height: auto

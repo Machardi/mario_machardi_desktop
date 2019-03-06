@@ -1,0 +1,36 @@
+mixin my-manager()
+  .personal-area-my-manager
+    form.personal-area-my-manager__form(action='?' method='POST')
+      .personal-area-my-manager__manager
+        .personal-area-my-manager__manager_photo
+          img(src='uploads/img_1_1.jpg')
+        .personal-area-my-manager__manager_content
+          .personal-area-my-manager__manager_name
+            | Назарян Евгений Дмитриевич
+          .personal-area-my-manager__manager_contacts
+            b Телефон:
+            =' '
+            | +7 (495) 889-01-03
+            br
+            b E-mail:
+            =' '
+            a(href='mailto:azaryan@machardi.ru') azaryan@machardi.ru
+            br
+            b Skype:
+            =' '
+            | nazaryan
+          .personal-area-my-manager__manager_textarea
+            label
+              | Написать сообщение
+            br
+            textarea(name='message')
+          .personal-area-my-manager__manager_file
+            label
+              | Прикрепить файл:
+            button.btn.btn_theme_black.btn_size_m(type='button')
+              span Выбрать
+              input(type='file' name='file')
+
+      .personal-area__submit
+        button.btn.btn_theme_black.btn_size_m(type='submit')
+          | Отправить

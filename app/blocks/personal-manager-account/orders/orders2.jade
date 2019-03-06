@@ -1,0 +1,102 @@
+mixin orders2()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='/personal_manager_account2.html#orders')=item.fio
+          br
+          span=item.company
+        td
+          a(href='/personal_manager_account2.html#orders')=item.orderNumber
+        td
+          =item.summa
+        td
+          if (item.status == 1)
+            .status_under=item.status_text
+          else if (item.status == 2)
+            .status_assigned=item.status_text
+          else if (item.status == 3)
+            .status_sent=item.status_text
+          else if (item.status == 4)
+            .status_ready=item.status_text
+
+  .pma-orders
+    .pma-orders__overview
+      a.pma-orders__overview_item.active(href='#')
+        | Все
+      a.pma-orders__overview_item(href='#')
+        | На рассмотрении
+      a.pma-orders__overview_item(href='#')
+        | Подтвержденные
+      a.pma-orders__overview_item(href='#')
+        | Собранные
+      a.pma-orders__overview_item(href='#')
+        | Отправленные
+      a.pma-orders__overview_item(href='#')
+        | Выполненные
+      a.pma-orders__overview_item(href='#')
+        | Просроченные
+
+    table.personal-admin-account__table
+      tr
+        th(width='35%')
+          span(sort-table)
+            | ФИО
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='21%')
+          span(sort-table)
+            | № Заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='21%')
+          span(sort-table)
+            | Сумма заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='21%')
+          span(sort-table)
+            | Статус заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+      +table-tr([{
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000001',
+          summa: '75 000',
+          status: 1,
+          status_text: 'Присвоить статус'
+      }, {
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000002',
+          summa: '75 000',
+          status: 2,
+          status_text: 'Подтвержден'
+      }, {
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000003',
+          summa: '75 000',
+          status: 3,
+          status_text: 'Отправлен 01.11.2016'
+      }, {
+          fio: 'Телингатер Соломон Бенедиктович',
+          company: 'ООО Пегас',
+          orderNumber: '0000004',
+          summa: '75 000',
+          status: 4,
+          status_text: 'Собран и готов к отправке'
+      }])
+
+    .paa-dealers__modal
+      .paa-dealers__modal_wrapper
+        .paa-dealers__modal_title
+          | Комментарий администратора
+        .paa-dealers__modal_textarea
+          textarea(name='comment')
+        .paa-dealers__modal_buttons
+          button.btn.btn_theme_pale-blue.btn_size_m(type='button' close-modal-comment)
+            | Сохранить
+          button.btn.btn_theme_black.btn_size_m(type='button' close-modal-comment)
+            | Отменить

@@ -1,0 +1,18 @@
+- var pageScripts = pageScripts || [[], [], []];
+
+include ../../../node_modules/bemto.jade/bemto.jade
+
+include ../scripts/scripts
+
+doctype html
+html(lang='ru')
+  include ../head/head
+  body.page
+    block content
+
+
+    script(src='https://cdn.polyfill.io/v2/polyfill.min.js')
+    +script([], ['externals.min.js'])
+    +script([], ['scripts.min.js'])
+
+    +scripts()

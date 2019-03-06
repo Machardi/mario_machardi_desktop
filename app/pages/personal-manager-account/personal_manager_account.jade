@@ -1,0 +1,23 @@
+include ../../blocks/header/header
+include ../../blocks/topmenu/topmenu
+include ../../blocks/topmenu-sticky/topmenu-sticky
+include ../../blocks/breadcrumbs/breadcrumbs
+include ../../blocks/personal-manager-account/personal-manager-account/personal-manager-account1
+include ../../blocks/footer/footer
+
+extends ../../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Личный кабинет менеджера';
+  - var pageId = 'personal-manager-account';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu(true, false)
+    +topmenu-sticky()
+    +breadcrumbs({
+        current_page: 'Личный кабинет менеджера'
+    })
+    +personal-manager-account1()
+    +footer()

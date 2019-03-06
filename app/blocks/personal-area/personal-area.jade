@@ -1,0 +1,43 @@
+include my-orders
+include delivery
+include payment-profile
+include distribution
+include my-manager
+include password
+
+mixin personal-area()
+  .personal-area
+    .personal-area__tabs
+      ul.personal-area__tabs_items.clearfix
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#my-orders'
+        aria-controls='my-orders' role='tab' data-toggle='tab'): b
+          | Мои заказы
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#delivery'
+        aria-controls='delivery' role='tab' data-toggle='tab'): b
+          | Доставка
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#payment-profile'
+        aria-controls='payment-profile' role='tab' data-toggle='tab'): b
+          | Профиль оплаты
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#distribution'
+        aria-controls='distribution' role='tab' data-toggle='tab'): b
+          | Рассылка
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#my-manager'
+        aria-controls='my-manager' role='tab' data-toggle='tab'): b
+          | Мой менеджер
+        li.personal-area__tabs_item: a.personal-area__tabs_link(href='#password'
+        aria-controls='password' role='tab' data-toggle='tab'): b
+          | Пароль
+
+      .personal-area__tabs_panels
+        .personal-area__tabs_panel-content#my-orders
+          +my-orders()
+        .personal-area__tabs_panel-content#delivery
+          +delivery()
+        .personal-area__tabs_panel-content#payment-profile
+          +payment-profile()
+        .personal-area__tabs_panel-content#distribution
+          +distribution()
+        .personal-area__tabs_panel-content#my-manager
+          +my-manager()
+        .personal-area__tabs_panel-content#password
+          +password()

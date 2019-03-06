@@ -1,0 +1,209 @@
+.wholesale-buyers-page
+  margin-top 30px
+  position relative
+
+  &__title
+    font-size 21px
+    font-weight 100
+    line-height 1.15
+    margin-bottom 40px
+
+  &__description
+    font-size 16px
+    font-weight 100
+    line-height 1.35
+
+
+// Стили для полной страницы
+.wholesale-buyers-page
+  &_full-page
+    & .wholesale-buyers-page
+      &__column
+        background-color #f1f4f8
+        float left
+        padding 36px 40px
+        position relative
+
+        &:nth-child(1)
+          height 250px
+          margin 0 469px 5px 0
+          position relative
+          width calc(100% - 469px)
+
+          & .wholesale-buyers-page__title
+            position absolute
+
+          & img
+            bottom 0
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+
+        &:nth-child(2)
+          height calc(100% - 255px)
+          overflow hidden
+          position absolute
+          right 0
+          width 464px
+
+          & img
+            margin 0 -40px 75px
+            max-width calc(100% + 80px)
+
+        &:nth-child(3)
+          height 390px
+          margin-right 5px
+          position relative
+          width calc((100% - 474px) / 2)
+
+          & .wholesale-buyers-page__title
+            position absolute
+
+          & img
+            bottom 0
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+
+        &:nth-child(4)
+          height 390px
+          position relative
+          width calc((100% - 474px) / 2)
+
+          & .wholesale-buyers-page__title
+            position absolute
+
+          & img
+            bottom 0
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+
+        &:nth-child(5)
+          margin-top 5px
+          padding 20px
+          position relative
+          text-align center
+          width calc(100% - 469px)
+
+          & .wholesale-buyers-page__title
+            left 40px
+            position absolute
+            top 35px
+            text-align left
+
+          & img
+            height auto
+            max-width 100%
+
+        &:nth-child(6)
+          display flex
+          align-items center
+          justify-content center
+          height 250px
+          margin-top 5px
+          width 100%
+
+
+// Стили для блока на странице
+.wholesale-buyers-page
+  &_block-page
+    & .wholesale-buyers-page
+      &__column
+        background-color #f1f4f8
+        float left
+        padding 36px 40px
+        position relative
+
+        &:nth-child(1)
+          height 460px
+          margin-right 5px
+          position relative
+          width calc(100% / 3 - 3.333px)
+
+          & .wholesale-buyers-page__title
+            position absolute
+
+          & img
+            bottom 0
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+
+        &:nth-child(2)
+          height 460px
+          margin-right 5px
+          position relative
+          width calc(100% / 3 - 3.333px)
+
+          & .wholesale-buyers-page__title
+            position absolute
+
+          & img
+            bottom 0
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+
+        &:nth-child(3)
+          height 460px
+          position relative
+          width calc(100% / 3 - 3.333px)
+
+          & .wholesale-buyers-page__title
+            position absolute
+
+          & img
+            bottom 0
+            left 0
+            margin auto
+            position absolute
+            right 0
+            top 0
+
+        &:nth-child(4)
+          margin-top 5px
+          padding 20px
+          position relative
+          text-align center
+          width calc(100% - (100% / 3 + 2px))
+
+          & .wholesale-buyers-page__title
+            left 40px
+            position absolute
+            top 35px
+            text-align left
+
+          & img
+            height auto
+            max-width 100%
+
+        &:nth-child(5)
+          margin-top 5px
+          max-height calc(100% - 720px)
+          overflow hidden
+          position absolute
+          right 0
+          top 460px
+          width calc(100% / 3 - 3.333px)
+
+          & img
+            max-width 100%
+
+        &:nth-child(6)
+          display flex
+          align-items center
+          justify-content center
+          height 250px
+          margin-top 5px
+          width 100%

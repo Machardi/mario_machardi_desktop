@@ -1,0 +1,72 @@
+mixin registration-requests2()
+  form.paa-registration-requests(action='?' method='POST')
+    .paa-registration-requests-one
+      .paa-registration-requests-one__column
+        .paa-managers-manager__data
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Номер заявки
+            .paa-managers-manager__data-content
+              | 0000001
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Фамилия, имя, отчество
+            .paa-managers-manager__data-content
+              | Телингатер Соломон Бенедиктович
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | E-mail
+            .paa-managers-manager__data-content
+              a(href='mailto:solomon@mail.ru'): b solomon@mail.ru
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Организация
+            .paa-managers-manager__data-content
+              | ООО Пегас
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Город
+            .paa-managers-manager__data-content
+              | Волгодонск
+              =' | '
+              span.close-city: b Закрытый город!
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Адрес магазина
+            .paa-managers-manager__data-content
+              | ул. Морская, 2
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label
+              | Телефон
+            .paa-managers-manager__data-content
+              | +7 (916) 386 54 46
+
+
+      .paa-registration-requests-one__column
+        .paa-registration-requests-one__data
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label.paa-managers-manager__data-label_small
+              | Регистрация
+            .paa-managers-manager__data-content
+              select.personal-admin-account__select-control(name='group_respondents')
+                option(value='Выберите') Выберите
+                option(value='Разрешить') Разрешить
+                option(value='Отклонить') Отклонить
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label.paa-managers-manager__data-label_small
+              | Менеджер
+            .paa-managers-manager__data-content
+              select.personal-admin-account__select-control(name='group_respondents')
+                option(value='Выберите') Выберите
+                option(value='Выберите2') Выберите 2
+          .paa-managers-manager__data-row
+            .paa-managers-manager__data-label.paa-managers-manager__data-label_small
+              | Скидка
+            .paa-managers-manager__data-content
+              select.personal-admin-account__select-control(name='group_respondents')
+                option(value='0%') 0%
+                option(value='5%') 5%
+
+    .distribution__row.personal-area__submit
+      button.btn.btn_theme_black.btn_size_m(type='button')
+        | Отправить

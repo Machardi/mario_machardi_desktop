@@ -1,0 +1,117 @@
+.mens-underwear
+  margin-top 30px
+
+  &__column
+    &_left
+      float left
+      margin-right 5px
+      width 465px
+
+    &_right
+      float right
+      width calc(100% - 470px)
+
+  &__item
+    background-color #f1f4f8
+    margin-bottom 5px
+    min-height 372px
+    padding 37px 40px
+    position relative
+
+    &_two
+      background-color #ff8a00
+
+    &_three
+      padding 40px 0
+
+  &__title
+    font-size 21px
+    font-weight 100
+    line-height 24px
+    margin-bottom 15px
+
+  &__item_two &__title
+    color white
+    font-size 40px
+    line-height 46px
+
+  &__order
+    bottom 0
+    left 0
+    position absolute
+    width 100%
+
+    & a
+      color white
+      display block
+      font-size 21px
+      font-weight 100
+      line-height 24px
+      padding 28px 40px
+      text-align left
+      width 100%
+
+      & .fa
+        display inline-block
+        font-size 21px
+        font-weight 600
+        margin-left 20px
+        vertical-align middle
+
+  &__collection-items
+    margin-top 35px
+
+    &_item
+      display inline-block
+      padding 0 18px
+      vertical-align middle
+
+      &:first-child
+        padding-left 0
+
+      &:last-child
+        padding-right 0
+
+    &_icon
+      display inline-block
+      vertical-align middle
+
+    &_text
+      display inline-block
+      font-size 12px
+      font-weight 300
+      line-height 14px
+      margin-left 15px
+      vertical-align middle
+
+  &__collection-info
+    margin 80px -40px -40px
+
+    &_item
+      background-color #e4e9f1
+      border-right 1px solid #cdd1d8
+      float left
+      min-height 90px
+      padding 20px
+      width (100 / 3)%
+
+      &:last-child
+        border-right 0
+
+    &_text
+      font-size 14px
+      font-weight 300
+      line-height 16px
+
+  &__slider
+    & .fotorama__arr--prev
+      retinaSprite($arrow_slider_left_group)
+      left 100px
+
+    & .fotorama__arr--next
+      retinaSprite($arrow_slider_right_group)
+      right 100px
+
+    &_item
+      text-align center
+

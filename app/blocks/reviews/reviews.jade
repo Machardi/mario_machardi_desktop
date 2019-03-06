@@ -1,0 +1,90 @@
+mixin reviews()
+  //Отзывы
+  .reviews
+    // TODO: Для отзывов есть 3 вида отображения: большой, средний и маленький
+    // Размер блока меняется блогодаря добавлению одного из нижеприведенных классов к 'reviews__item':
+    // reviews__item_large - большой
+    // reviews__item_medium - средний
+    // reviews__item_small - маленький
+
+    // Размер текста меняется блогодаря добавлению одного из нижеприведенных классов к 'reviews__item_review-text':
+    // reviews__item_review-text_large - большой
+    // reviews__item_review-text_medium - средний
+    // reviews__item_review-text_small - маленький
+
+    // Предполагается, что в админке будет 2 select'a с помощью которых можно будет выбрать
+    // нужный размер отображения текста и блока для отзыва
+
+    // Если делать ajax подгрузку отзывов, то после вставки в dom загруженных отзывов нужно
+    // вызывать функцию resizedRow(); для того чтобы высота блоков в строке выравнивалась по высоте
+    // наибольшего блока
+    .reviews__wrapper
+      .reviews__row.clearfix
+        .reviews__item.reviews__item_large
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_large
+              p Хочу выразить благодарность за оперативную работу коллектива, хорошее качество продукции и своевременную доставку. Исключительно положительные эмоции от работы с Вами!
+            .reviews__item_review-author
+              span
+                | Екатерина
+                br
+                | Дебнева
+
+        .reviews__item.reviews__item_small
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_small
+              p Здравствуйте!
+              p Вчера получила свой заказ! Очень довольна вашей оперативной работой по сборке заказов, качеством вашей продукции и совпадением размеров одежды!! Спасибо большое!!!
+            .reviews__item_review-author
+              span
+                | Ольга
+                br
+                | Васильевна
+
+      .reviews__row.clearfix
+        .reviews__item.reviews__item_medium
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_medium
+              p Очень понравилось качество одежды. Спасибо! Буду заказывать еще.
+            .reviews__item_review-author
+              span
+                | Виктор
+                br
+                | Немцов
+
+        .reviews__item.reviews__item_medium
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_medium
+              p Привет! Я всем очень довольна, вот только новинок бы побольше, а в остальном всё классно!
+            .reviews__item_review-author
+              span
+                | Виктория
+
+        .reviews__item.reviews__item_small
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_small
+              p Получила заказ,качество отличное,модели подошли точно по размеру. Огромное спасибо. Осталась очень довольна.
+            .reviews__item_review-author
+              span
+                | Анна
+
+      .reviews__row.clearfix
+        .reviews__item.reviews__item_medium
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_medium
+              p На прошлой неделе приезжала к вам, сделала заказ. Очень порадовал ассортимент. Много новых дизайнов, хорошие воротнички - модные.
+            .reviews__item_review-author
+              span
+                | Юлия
+
+        .reviews__item.reviews__item_large
+          .reviews__item_wrapper
+            .reviews__item_review-text.reviews__item_review-text_medium
+              p Мне очень нравятся сорочки этой фирмы. У них отличное качество и всегда большой выбор расцветок. Муж и сын довольны и носят с удовольствием, а благодаря обработке, которая используется для тканей, я забыла как выглядит  утюг и гладильная доска - я просто вешаю чистую влажную сорочку на вешалку и она разглаживается сама.
+            .reviews__item_review-author
+              span
+                | Галина
+
+    .reviews__more-reviews
+      a.reviews__more-reviews_button(href='#')
+        | Еще отзывы

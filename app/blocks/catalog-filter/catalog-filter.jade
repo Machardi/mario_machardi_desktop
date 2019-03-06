@@ -1,0 +1,332 @@
+mixin catalog-filter()
+  .catalog-filter
+
+    .catalog-filter__title.global-blocks-title
+      span.global-blocks-title_text(data-popup="#catalog-filter") Выберите параметры сортировки
+        img(src="images/icons/drop-arrow.svg", alt="arrow")
+
+    form.catalog-filter__filters.clearfix#catalog-filter(action='?' method='POST')
+      .catalog-filter__filters_row
+        .catalog-filter__filters_group
+          p.catalog-filter__filters_group_title Фасон
+
+          ul.catalog-filter__filters_list(aria-labelledby='style')
+
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='style' rel="CLASSIC")
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Classic
+            li.catalog-filter__filters__item    
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='style' rel="CLASSIC COMFORT")
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Classic comfort
+            li.catalog-filter__filters__item    
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='style' rel="SLIM FIT")
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Slim Fit
+            li.catalog-filter__filters__item    
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='style' rel="SUPER SLIM FIT")
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Super Slim Fit
+      
+     
+        .catalog-filter__filters_group.processing
+          
+          p.catalog-filter__filters_group_title Обработка
+            
+          ul.catalog-filter__filters_list(aria-labelledby='processing')
+
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='processing')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Non Iron
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='processing')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Easy Care
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='processing')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Modal
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='processing')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Non Iron
+                  small + Антидождь
+      
+      .catalog-filter__filters_row  
+        .catalog-filter__filters_group.sizes
+        
+          p.catalog-filter__filters_group_title Размер
+
+          ul.catalog-filter__filters_list.sizes-number(aria-labelledby='size')
+
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 37
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 38
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 39
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 40
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 41
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 42
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 43
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 44
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 45
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 46
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 47
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 48
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 49
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 50
+
+
+          ul.catalog-filter__filters_list.sezes-letter(aria-labelledby='size')
+
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label S
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label L
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label M
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label XL
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 2XL
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='size')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label 3XL
+        
+      .catalog-filter__filters_row
+        .catalog-filter__filters_group.color
+          
+          p.catalog-filter__filters_group_title Цвет
+            
+          ul.catalog-filter__filters_list(aria-labelledby='color')
+
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #EFAEAE;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #EAF27D;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #AE0ECC;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #E509AA;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #CEBFAC;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #8DBFEB;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #1134E3;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #1263A1;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #219EA7;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')      
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #32E68C;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #7B770B;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #FFA42D;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #612727;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #FE4F4F;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #C7AFAF;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #C2C2C2;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #7B770B;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #FFA42D;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #612727;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #FE4F4F;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #C7AFAF;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox(style="background-color: #C2C2C2;")
+                input.catalog-filter__checkbox_input(type='checkbox' name='color')
+                img(src='images/icons/check-white.svg' alt='check')
+
+        
+      .catalog-filter__filters_row
+        .catalog-filter__filters_group.sleeve
+
+          p.catalog-filter__filters_group_title Рукав
+
+          ul.catalog-filter__filters_list(aria-labelledby='sleeve')
+
+            li.catalog-filter__filters__item
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='sleeve')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Длинный
+            li.catalog-filter__filters__item    
+              label.catalog-filter__checkbox
+                input.catalog-filter__checkbox_input(type='checkbox' name='sleeve')
+                img(src='images/icons/check.svg' alt='check')
+                span.catalog-filter__checkbox_label Короткий
+        
+        .catalog-filter__filters_group.range
+
+          p.catalog-filter__filters_group_title Стоимость
+
+          ul.catalog-filter__filters_list(aria-labelledby='range')
+            
+            li.catalog-filter__filters__item
+              label.catalog-filter__range
+                span.catalog-filter__range_label От
+                input.catalog-filter__range_input(type='text', min='0', max='120000', name='range' placeholder="0")
+                
+                
+            li.catalog-filter__filters__item    
+              label.catalog-filter__range
+                span.catalog-filter__range_label До  
+                input.catalog-filter__range_input(type='text', min='0', max='120000', name='range' placeholder="0")
+                
+         
+
+
+      .catalog-filter__filters_row
+        .catalog-filter__filters_group.buttons
+          button.btn.btn_theme_pale-blue.btn_size_m(type='button' reset-filters-button)
+            | Отменить
+        
+          button.btn.btn_theme_black.btn_size_m(type='button' more-filters-button)
+            | Применить
+    
+    //- .catalog-filter__your-choices
+    //-   .catalog-filter__your-choices_title
+    //-     | Вы выбрали:
+    //-   .catalog-filter__your-choices_items.clearfix
+    //-     .catalog-filter__your-choices_item
+    //-       | Кент
+    //-       .catalog-filter__your-choices_item-delete
+    //-         | &times;
+    //-     .catalog-filter__your-choices_item
+    //-       | Длинный рукав
+    //-       .catalog-filter__your-choices_item-delete
+    //-         | &times;
+

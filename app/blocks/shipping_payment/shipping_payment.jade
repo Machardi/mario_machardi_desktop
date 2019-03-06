@@ -1,0 +1,162 @@
+mixin shipping_payment()
+  .shipping_payment
+    .shipping_payment__column.clearfix
+      .shipping_payment__column_left
+        .shipping_payment__title
+          | Доставка и оплата
+          br
+          b По всей России
+        form.shipping_payment__form
+          input.shipping_payment__input-control(type='text' name='q'
+          placeholder='Чтобы узнать стоимость доставки, введите название города')
+          button.btn.btn_theme_black.btn_size_m(type='submit')
+            | Выбрать
+      .shipping_payment__column_right
+        .shipping_payment__title
+          b Доставка
+        p
+          | При необходимости сроки и стоимость доставки могут быть скорректированы.
+          br
+          br
+          b Варианты оплаты заказа:
+        ul
+          li &mdash; Наличными
+          li &mdash; Банковской картой
+          li &mdash; По квитанции через банк
+
+    .shipping_payment__items
+      .shipping_payment__items_item
+        .shipping_payment__items_link.collapsed(role='button' data-toggle='collapse' href='#collapse-1'
+        aria-expanded='false' aria-controls='collapse-1')
+          .shipping_payment__items_title
+            | Доставка и оплата по Москве и Московской области
+          .shipping_payment__items_arrow
+            i.fa.fa-angle-down
+            i.fa.fa-angle-up
+        .shipping_payment__items_panel.collapse#collapse-1(role='tabpanel')
+          +tabelShippingPayment()
+
+      .shipping_payment__items_item
+        .shipping_payment__items_link.collapsed(role='button' data-toggle='collapse' href='#collapse-2'
+        aria-expanded='false' aria-controls='collapse-2')
+          .shipping_payment__items_title
+            | Доставка и оплата по России
+          .shipping_payment__items_arrow
+            i.fa.fa-angle-down
+            i.fa.fa-angle-up
+        .shipping_payment__items_panel.collapse#collapse-2(role='tabpanel')
+          +tabelShippingPayment()
+
+
+mixin tabelShippingPayment()
+  table.shipping_payment__table
+    tr
+      th способ<br>доставки
+      th сроки<br>доставки
+      th стоимость
+      th примерка<br>и частичный выкуп
+      th(width=145) способ<br>оплаты
+      th срок хранения<br>заказа
+      th количество<br>позиций
+
+    tr
+      td
+        .shipping_payment__table_company
+          img(src='/uploads/delivery_comp/img_1.jpg')
+        | Курьерская служба
+        br
+        b Москва
+      td
+        | Завтра
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        b
+          | 300
+          span.rub &nbsp;q
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Есть
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Банковская карта / Наличными при получении
+      td
+        | 3 дня
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | до 10
+    tr
+      td
+        .shipping_payment__table_company
+          img(src='/uploads/delivery_comp/img_2.jpg')
+        | Курьерская служба
+        br
+        b Москва
+      td
+        | Завтра
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        b
+          | 300
+          span.rub &nbsp;q
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Есть
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Банковская карта / Наличными при получении
+      td
+        | 3 дня
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | до 10
+    tr
+      td
+        .shipping_payment__table_company
+          img(src='/uploads/delivery_comp/img_1.jpg')
+        | Курьерская служба
+        br
+        b Москва
+      td
+        | Завтра
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        b
+          | 300
+          span.rub &nbsp;q
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Есть
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Банковская карта / Наличными при получении
+      td
+        | 3 дня
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | до 10
+    tr
+      td
+        .shipping_payment__table_company
+          img(src='/uploads/delivery_comp/img_2.jpg')
+        | Курьерская служба
+        br
+        b Москва
+      td
+        | Завтра
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        b
+          | 300
+          span.rub &nbsp;q
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Есть
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | Банковская карта / Наличными при получении
+      td
+        | 3 дня
+        span.shipping_payment__table_tooltip(data-toggle='tooltip' data-placement='top' title='tooltip') ?
+      td
+        | до 10
+

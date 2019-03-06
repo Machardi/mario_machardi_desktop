@@ -1,0 +1,55 @@
+mixin closed-cities1()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          span.city=item.city
+          br
+          =item.info
+        td
+          button.basket__good_remove(type='button')
+            b &times;
+
+  .paa-closed-cities
+    table.personal-admin-account__table
+      tr
+        th
+          span(sort-table)
+            | Города
+            =' '
+            i.fa.fa-angle-down.no-print
+        th(width='5%')
+          | Удалить
+      +table-tr([{
+        city: 'Волгоград',
+        info: 'Телингатер Соломон Бенедиктович | ООО Пегас'
+      }, {
+        city: 'Ашхабад',
+        info: 'Лазурский Вадим Вадимович | ООО Лигатура'
+      }, {
+        city: 'Ростов-на-Дону',
+        info: 'Короленко Лариса Дмитриевна | ИП Ласточка'
+      }, {
+        city: 'Шатура',
+        info: 'Ким Валерий Карпович | ООО Восток'
+      }])
+
+    form.paa-closed-cities__add-closed-city(action='?' method='POST')
+      .paa-closed-cities__add-closed-city_title
+        .paa-closed-cities__add-closed-city_title_text
+          | Добавить закрытый город
+      .paa-closed-cities__add-closed-city_form
+        .paa-closed-cities__add-closed-city_column
+          label
+            | Город
+          input(type='text')
+        .paa-closed-cities__add-closed-city_column
+          label
+            | Дилер
+          select.personal-admin-account__select-control(name='group_respondents')
+            option(value='Выберите') Выберите
+            option(value='Выберите2') Выберите 2
+
+      .distribution__row.personal-area__submit
+        button.btn.btn_theme_black.btn_size_m(type='button' new-city)
+          | Добавить

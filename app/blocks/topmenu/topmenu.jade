@@ -1,0 +1,179 @@
+include ../personal-account/personal-account
+
+mixin menuItems(menu)
+  ul.topmenu__submenu-two-level_group
+    li.topmenu__submenu-two-level_group-title= menu.title
+    each item in menu.elements
+      li.topmenu__submenu-two-level_item
+        a.topmenu__submenu-two-level_link(href='#')= item.item_name
+
+mixin topmenu(authorized, adminAccount)
+  // Topmenu
+  // TODO: Информация по добавлению классов к элементам меню
+  // класс 'topmenu__general_item_active' должен добавляться к элементу 'topmenu__general_item'
+  // если мы находимся на странице ПРОДУКЦИЯ или ТЕХНОЛОГИИ или О КОМПАНИИ
+  .topmenu
+    +personal-account(authorized, adminAccount)
+    // 1 level menu
+    ul.topmenu__general.clearfix
+      li(class=(pageId == 'home' || pageId == 'products' || pageId == 'catalog' || pageId == 'product') ? 'topmenu__general_item topmenu__general_item_active' : 'topmenu__general_item')
+        a.topmenu__general_link(href='products.html')
+          | Продукция
+        // 2 level menu
+        ul.topmenu__submenu.clearfix
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Сорочки
+            // 3 level menu
+            .topmenu__submenu-two-level.clearfix
+              +menuItems({
+                title: 'Обработка',
+                elements: [{
+                  item_name: 'Wolecula'
+                }, {
+                  item_name: 'Welcon'
+                }, {
+                  item_name: 'Ease Care'
+                }, {
+                  item_name: 'Fresh'
+                }, {
+                  item_name: 'NonIron'
+                }, {
+                  item_name: 'Antismell & Bacteria'
+                }]
+              })
+              +menuItems({
+                title: 'Фасон',
+                elements: [{
+                  item_name: 'Classic'
+                }, {
+                  item_name: 'Slim Fit'
+                }, {
+                  item_name: 'Super Slim Fit'
+                }, {
+                  item_name: 'Slim Fit Sport'
+                }]
+              })
+              +menuItems({
+                title: 'Рукав',
+                elements: [{
+                  item_name: 'Длинный'
+                }, {
+                  item_name: 'Короткий'
+                }]
+              })
+              +menuItems({
+                title: 'Рисунок',
+                elements: [{
+                  item_name: 'Однотонный'
+                }, {
+                  item_name: 'Многоцветный'
+                }, {
+                  item_name: 'Принт'
+                }]
+              })
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Галстуки
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Кашне
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Пластроны
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Жилеты
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Бабочки
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Подтяжки
+            // 3 level menu
+            .topmenu__submenu-two-level.clearfix
+              +menuItems({
+                title: 'Обработка',
+                elements: [{
+                  item_name: 'Wolecula'
+                }, {
+                  item_name: 'Welcon'
+                }, {
+                  item_name: 'Ease Care'
+                }, {
+                  item_name: 'Fresh'
+                }, {
+                  item_name: 'NonIron'
+                }, {
+                  item_name: 'Antismell & Bacteria'
+                }]
+              })
+              +menuItems({
+                title: 'Фасон',
+                elements: [{
+                  item_name: 'Classic'
+                }, {
+                  item_name: 'Slim Fit'
+                }, {
+                  item_name: 'Super Slim Fit'
+                }, {
+                  item_name: 'Slim Fit Sport'
+                }]
+              })
+              +menuItems({
+                title: 'Рукав',
+                elements: [{
+                  item_name: 'Длинный'
+                }, {
+                  item_name: 'Короткий'
+                }]
+              })
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='catalog.html')
+              | Запонки
+      li.topmenu__general_item(class=(pageId == 'technologies') ? 'topmenu__general_item topmenu__general_item_active' : 'topmenu__general_item')
+        a.topmenu__general_link(href='technologies.html')
+          | Технологии
+      li.topmenu__general_item(class=(pageId == 'about_company' || pageId == 'reviews' || pageId == 'shops' || pageId == 'contacts' || pageId == 'catalog-nos' || pageId == 'mens-underwear' || pageId == 'cooperation') ? 'topmenu__general_item topmenu__general_item_active' : 'topmenu__general_item')
+        a.topmenu__general_link(href='about_company.html')
+          | О компании
+        // 2 level menu
+        ul.topmenu__submenu.clearfix
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='reviews.html')
+              | Отзывы
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='shops.html')
+              | Магазины
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='contacts.html')
+              | Контакты
+      li.topmenu__general_item(class=(pageId == 'wholesale-buyers' || pageId == 'wholesale-buyers-inner1' || pageId == 'wholesale-buyers-inner2' || pageId == 'wholesale-buyers-inner3' || pageId == 'wholesale-buyers-inner4' || pageId == 'wholesale-buyers-inner5' || pageId == 'wholesale-buyers-inner6' || pageId == 'wholesale-buyers-inner7' || pageId == 'wholesale-buyers-inner8') ? 'topmenu__general_item topmenu__general_item_active' : 'topmenu__general_item')
+        a.topmenu__general_link(href='wholesale_buyers.html')
+          | Оптовым покупателям
+        // 2 level menu
+        ul.topmenu__submenu.clearfix
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner1.html')
+              | Сорочки
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner2.html')
+              | Бабочки
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner3.html')
+              | Галстуки
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner4.html')
+              | Жилеты
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner5.html')
+              | Запонки
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner6.html')
+              | Кашне
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner7.html')
+              | Пластроны
+          li.topmenu__submenu_item
+            a.topmenu__submenu_link(href='wholesale_buyers_inner8.html')
+              | Подтяжки

@@ -1,0 +1,33 @@
+.personal-area-my-orders
+  [sort-table],
+  [hide-image]
+    cursor pointer
+    user-select none
+
+  & .good
+    display flex
+
+    &__old-price,
+    &__new-price
+      font-weight 500
+
+    &__old-price
+      color #858585
+      text-decoration line-through
+
+    &__new-price
+      color #e20c0c
+
+    &__good
+      padding-right 5%
+      width 73.5%
+
+    &__image
+      display none
+      margin-bottom 20px
+      padding-right 5%
+      width 73.5%
+
+      & img
+        height auto
+        max-width 100%

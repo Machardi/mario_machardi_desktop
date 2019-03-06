@@ -1,0 +1,133 @@
+.personal-account
+  bottom 44px
+  position absolute
+  right 0
+
+  &__bottom
+    margin 0
+    padding 0
+
+    &_item
+      float left
+      list-style none
+      margin 0 10px
+
+      &:last-child
+        margin-right 0
+
+    &_text,
+    &_separator,
+    &_link
+      display inline-block
+      font-size 14px
+      line-height 18px
+      padding 11px 0
+      transition color 0.15s ease-out
+      vertical-align middle
+
+    &_text,
+    &_link
+      font-weight 500
+
+    &_separator
+      font-weight 100
+
+    &_link
+      color black
+      cursor pointer
+
+      &:hover
+        color #d10909
+
+      & .icons
+        margin-right 10px
+
+    &_separator
+      margin 0 5px
+
+    &_unbold
+      display inline-block
+      font-weight 100
+      vertical-align middle
+
+    &_bold
+      font-weight 700
+
+    &_request-call
+      color #d10909
+
+    & .rub
+      display inline-block
+      margin 0 5px 0 5px
+      vertical-align middle
+
+    .windows & .rub
+      margin-top -7px
+
+    .windows & .rub + &_unbold
+      margin-top -2px
+
+    & .icons__icon-basket
+      margin-top -2px
+
+    .windows & .icons__icon-basket
+      margin-top -4px
+
+    & [data-popup]
+      position relative
+
+      &:after
+        background-color black
+        bottom 0
+        content ''
+        display block
+        height 0
+        position absolute
+        transition height 0.1s ease-out
+        width 100%
+        z-index 3
+
+    & .popup-link-active
+      color black
+
+      &:after
+        height 3px
+
+    &_request-call[data-popup]
+      &:after
+        background-color #d10909
+
+    &_request-call.popup-link-active
+      color #d10909
+
+  &__top
+    margin 0
+    padding 0
+    position absolute
+    right 0
+    top -27px
+
+    &_item
+      float left
+      list-style none
+
+    &_link
+      border-right 1px solid black
+      display inline-block
+      font-size 14px
+      font-weight 100
+      line-height 14px
+      padding 0 5px
+      transition color 0.15s ease-out
+
+      &:hover
+        color #d10909
+
+    &_item:first-child &_link
+      padding-left 0
+
+    &_item:last-child &_link
+      padding-right 0
+
+    &_item:last-child &_link
+      border-right none

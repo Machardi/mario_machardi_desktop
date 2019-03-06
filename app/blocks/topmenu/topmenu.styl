@@ -1,0 +1,144 @@
+.topmenu
+  margin 0 0 26px
+  padding-bottom 44px
+  position relative
+  z-index 5
+
+  &__general
+    border-bottom 1px solid #f0f0f0
+    margin 0
+    padding 0
+
+    &_item
+      float left
+      list-style none
+
+    &_link
+      color black
+      display block
+      font-size 18px
+      font-weight 700
+      line-height 22px
+      padding 9px 6px
+      position relative
+
+      &:after
+        background-color black
+        bottom -2px
+        content ''
+        display block
+        height 0
+        position absolute
+        transition height 0.1s ease-out
+        width calc(100% - 12px)
+
+    &_item:first-child &_link
+      padding-left 0
+
+      &:after
+        width calc(100% - 6px)
+
+    &_item:last-child &_link
+      padding-right 0
+
+      &:after
+        width calc(100% - 6px)
+
+    &_item:hover &_link
+    &_item_active &_link
+      &:after
+        height 3px
+
+    &_item_hide-border &_link
+      &:after
+        height 0
+
+  &__submenu
+    border-bottom 1px solid #f0f0f0
+    display none
+    left 0
+    margin 0
+    padding 0
+    position absolute
+    width 100%
+
+    &_item
+      float left
+      list-style none
+
+    &_link
+      color black
+      display block
+      font-size 18px
+      font-weight 100
+      line-height 22px
+      padding 11px 15px
+      position relative
+
+      &_active
+        &:after
+          background-color white
+          border 1px solid #f0f0f0
+          border-top none
+          border-right none
+          bottom -11px
+          content ''
+          height 10px
+          left calc(50% - 10px)
+          position absolute
+          transform-origin top left
+          transform rotate(-45deg)
+          width 10px
+          z-index 1
+
+    &_item:first-child &_link
+      margin-left -15px
+
+  &__general_item_hover &__submenu,
+  &__general_item_active &__submenu
+    display block
+
+  &__submenu-two-level
+    background-color white
+    border-top 1px solid #f0f0f0
+    display none
+    left 0
+    padding 33px 0 50px
+    position absolute
+    width 100%
+
+    &_active
+      display block
+
+    &_group
+      float left
+      margin 0 3.5%
+      padding 0
+
+      &:first-child
+        margin-left 0
+
+      &:last-child
+        margin-right 0
+
+    &_group-title
+      font-size 16px
+      font-weight 700
+      list-style none
+      line-height 20px
+      margin-bottom 25px
+
+    &_item
+      display block
+      list-style none
+      margin 5px 0
+
+    &_link
+      color black
+      display inline-block
+      font-size 16px
+      font-weight 100
+      line-height 20px
+
+      &:hover
+        border-bottom 1px solid black

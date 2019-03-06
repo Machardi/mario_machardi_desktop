@@ -1,0 +1,33 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/breadcrumbs/breadcrumbs
+include ../blocks/wolecula-header/wolecula-header
+include ../blocks/technologies-description/technologies-description
+include ../blocks/innovations/innovations
+include ../blocks/welcon-welded-connection/welcon-welded-connection
+include ../blocks/content-gray-wrapper/non-iron
+include ../blocks/content-gray-wrapper/easy-care
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Технологии';
+  - var pageId = 'technologies';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +breadcrumbs({
+      current_page: 'Технологии'
+    })
+    +wolecula-header()
+    +technologies-description()
+    +innovations(true)
+    +welcon-welded-connection()
+    +non-iron()
+    +easy-care()
+    +footer()

@@ -1,0 +1,17 @@
+mixin header()
+  // Шапка
+  .header
+    a.header__phone(href='tel:88001006676') 8(800) 100-66-76
+    a.header__logo(href='index.html')
+      img(src="images/icons/logo.svg", alt="Machardi")
+
+    .header__top-bullet.clearfix
+      .header__tagline
+        | Nato in Italia
+      .header__search
+        form.header__search_form(action='?' method='POST')
+            input.header__search_field(type='search' name='q')
+            button.header__search_submit(type='submit')
+
+    //- .like-notify
+    //-   .like-notify__wrapper

@@ -1,0 +1,62 @@
+mixin managers3()
+  mixin table-tr(items)
+    each item in items
+      tr
+        td
+          a(href='/personal_admin_account2.html')=item.fio
+          br
+          =item.org
+        td
+          =item.city
+        td
+          select.personal-admin-account__select-control(name='group_respondents')
+            option(value='Выберите') Выберите
+            option(value='Выберите2') Выберите 2
+        td
+          =item.dateLastOrder
+
+  .paa-dealers
+    .paa-managers__selectes
+      a(href='#'): b Касаткин Валерий
+      =' | '
+      | 8 дилеров
+    table.personal-admin-account__table
+      tr
+        th
+          span(sort-table)
+            | ФИО
+            =' '
+            i.fa.fa-angle-down.no-print
+        th
+          span(sort-table)
+            | Город
+            =' '
+            i.fa.fa-angle-down.no-print
+        th
+          | Менеджер
+        th(width='17%')
+          span(sort-table)
+            | Дата последнего заказа
+            =' '
+            i.fa.fa-angle-down.no-print
+      +table-tr([{
+        fio: 'Телингатер Соломон Бенедиктович',
+        org: 'ООО Пегас',
+        city: 'Владивосток',
+        dateLastOrder: '10.02.2017'
+      }, {
+        fio: 'Лазурский Вадим Владимирович',
+        org: 'ООО Лигатура',
+        city: 'Уфа',
+        dateLastOrder: '10.02.2017'
+      }, {
+        fio: 'Короленко Лариса Дмитриевна',
+        org: 'ИП Ласточка',
+        city: 'Петропавловск-Камчатский',
+        dateLastOrder: '10.02.2017'
+      }, {
+        fio: 'Ким Валерий Карпович',
+        org: 'ООО Восток',
+        city: 'Бронницы',
+        dateLastOrder: '09.02.2017'
+      }])

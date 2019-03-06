@@ -1,0 +1,121 @@
+.footer
+  margin 50px 0 110px
+
+  &__logo
+    position relative
+
+    &_wrapper
+      background-color white
+      margin 0 auto
+      position relative
+      text-align center
+      width 270px
+      z-index 1
+
+    &:after
+      background-color #f0f0f0
+      bottom 0
+      content ''
+      height 1px
+      left 0
+      margin auto 0
+      position absolute
+      top 0
+      width 100%
+
+  &__wrapper
+    margin-top 75px
+
+  &__group
+    float left
+
+  &__contacts
+    transition width 0.4s ease-out
+    width 350px
+
+    +below(1260px)
+      width 280px
+
+    &_group
+      margin-bottom 20px
+
+    &_title
+      font-size 18px
+      font-weight 700
+      line-height 30px
+
+    &_text
+      font-size 18px
+      font-weight 100
+      line-height 22px
+
+    & a
+      color #0096ff
+
+      &:hover
+        text-decoration underline
+
+  &__menu
+    padding-left 4%
+    transition width 0.4s ease-out
+    width calc(100% - (350px + 230px))
+
+    +below(1260px)
+      width calc(100% - (280px + 230px))
+
+    &_group
+      float left
+      margin-right 15%
+      transition margin-right 0.4s ease-out
+
+      +below(1260px)
+        margin-right 5%
+
+      &:last-child
+        margin-right 0
+
+    &_title
+      margin-bottom 17px
+
+      &_link
+        font-size 18px
+        font-weight 500
+        line-height 22px
+
+        &:hover
+          text-decoration underline
+
+    &_item
+      margin 7px 0
+
+    &_link
+      display inline-block
+      font-size 18px
+      font-weight 100
+      line-height 22px
+
+      &:hover
+        text-decoration underline
+
+  &__search
+    position relative
+    width 230px
+
+    &_field
+      border 1px solid #e1e1e1
+      font-family $museo
+      font-size 15px
+      font-weight 300
+      padding 4px 10px
+      width 230px
+
+    &_submit
+      background-color transparent
+      border none
+      bottom 0
+      margin auto 0
+      padding 0
+      position absolute
+      retinaSprite($search_loup_group)
+      right 10px
+      top 0

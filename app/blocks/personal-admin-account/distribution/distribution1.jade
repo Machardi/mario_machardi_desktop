@@ -1,0 +1,272 @@
+mixin distribution()
+  .distribution
+    form(action='?' method='POST')
+      .distribution__row
+        .distribution__title
+          | Выберите группу респондентов
+          small Всем дилерам или только прикрепленным к определенному менеджеру
+        .distribution__row_content
+          select.basket__select-control(name='group_respondents')
+            option(value='Выберите') Выберите
+            option(value='Выберите2') Выберите 2
+
+      .distribution__row.refinement-options
+        .distribution__title
+          | Уточняющие параметры
+          small Всем дилерам или только прикрепленным к определенному менеджеру
+        .distribution__row_content
+          label.distribution__checkbox(data-refinement-options='1')
+            input.distribution__checkbox_input(type='checkbox' name='name1' checked)
+            span.distribution__checkbox_label Все
+          label.distribution__checkbox(data-refinement-options='2')
+            input.distribution__checkbox_input(type='checkbox' name='name2')
+            span.distribution__checkbox_label VIP-клиенты
+          label.distribution__checkbox(data-refinement-options='3')
+            input.distribution__checkbox_input(type='checkbox' name='name3')
+            span.distribution__checkbox_label Перспективные
+          label.distribution__checkbox(data-refinement-options='4')
+            input.distribution__checkbox_input(type='checkbox' name='name4')
+            span.distribution__checkbox_label Неработающие
+
+          .distribution__row_content_column-wrapper
+            .distribution__row_content_column.distribution__row_content_column_four(data-refinement-options-show)
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name5' disabled='disabled')
+                span.distribution__checkbox_label Сорочки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name6' disabled='disabled')
+                span.distribution__checkbox_label Галстуки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name7' disabled='disabled')
+                span.distribution__checkbox_label Кашне
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name8' disabled='disabled')
+                span.distribution__checkbox_label Трикотаж
+
+            .distribution__row_content_column.distribution__row_content_column_four(data-refinement-options-show)
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name9' disabled='disabled')
+                span.distribution__checkbox_label Пластроны
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name10' disabled='disabled')
+                span.distribution__checkbox_label Жилеты
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name11' disabled='disabled')
+                span.distribution__checkbox_label Бабочки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name12' disabled='disabled')
+                span.distribution__checkbox_label Камербенд
+
+            .distribution__row_content_column.distribution__row_content_column_four(data-refinement-options-show)
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name13' disabled='disabled')
+                span.distribution__checkbox_label Подтяжки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name14' disabled='disabled')
+                span.distribution__checkbox_label Ремни
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name15' disabled='disabled')
+                span.distribution__checkbox_label Носки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name16' disabled='disabled')
+                span.distribution__checkbox_label Платки
+
+            .distribution__row_content_column.distribution__row_content_column_four(data-refinement-options-show)
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name17' disabled='disabled')
+                span.distribution__checkbox_label Брюки
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name18' disabled='disabled')
+                span.distribution__checkbox_label Заколки, запонки
+
+
+      .distribution__row.certain-dealers
+        .distribution__title
+          | Или определенных дилеров
+        .distribution__row_content
+          .distribution__row_content_column-wrapper
+            .distribution__row_content_column.distribution__row_content_column_three
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_1' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Смирнова Татьяна Васильевна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_2' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_3' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_4' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_5' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Санников Валерий Александрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_6' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_7' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_8' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_9' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Смирнова Татьяна Васильевна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_10' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_11' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_12' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_13' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Санников Валерий Александрович
+
+            .distribution__row_content_column.distribution__row_content_column_three
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_14' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Смирнова Татьяна Васильевна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_15' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_16' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_17' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_18' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Санников Валерий Александрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_19' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_20' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_21' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_22' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Смирнова Татьяна Васильевна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_23' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_24' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_25' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_26' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Санников Валерий Александрович
+
+            .distribution__row_content_column.distribution__row_content_column_three
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_27' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Смирнова Татьяна Васильевна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_28' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_29' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_30' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_31' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Санников Валерий Александрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_32' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_33' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_34' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_35' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Смирнова Татьяна Васильевна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_36' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самитов Юрий Павлович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_37' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Силуянов Анастав Петрович
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_38' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Самшит Гюльчатай Захаровна
+              br
+              label.distribution__checkbox
+                input.distribution__checkbox_input(type='checkbox' name='name_2_39' checked)
+                span.distribution__checkbox_label.distribution__checkbox_label_large Санников Валерий Александрович
+
+      .distribution__row.distribution-text
+        .distribution__title
+          | Текст рассылки
+        .distribution__row_content
+          .personal-area-my-manager__manager_textarea
+            textarea(name='message')
+          .personal-area-my-manager__manager_file
+            label
+              | Прикрепить файл:
+            button.btn.btn_theme_black.btn_size_m(type='button')
+              span Выбрать
+              input(type='file' name='file')
+
+      .distribution__row.personal-area__submit
+        button.btn.btn_theme_black.btn_size_m(type='submit')
+          | Разослать

@@ -1,0 +1,29 @@
+include ../blocks/header/header
+include ../blocks/topmenu/topmenu
+include ../blocks/topmenu-sticky/topmenu-sticky
+include ../blocks/main-image/main-image
+include ../blocks/popular-goods/popular-goods
+include ../blocks/innovations/innovations
+include ../blocks/novelty/novelty
+include ../blocks/wholesale-buyers/wholesale-buyers
+include ../blocks/content-gray-wrapper/about-company
+include ../blocks/footer/footer
+
+extends ../blocks/layout-default/layout-default
+
+block head
+  - var pageTitle = 'Главная страница';
+  - var pageId = 'home';
+
+block content
+  .page__wrapper
+    +header()
+    +topmenu()
+    +topmenu-sticky()
+    +main-image()
+    +popular-goods()
+    +innovations()
+    +novelty()
+    +wholesale-buyers()
+    +about-company()
+    +footer()

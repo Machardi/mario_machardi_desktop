@@ -1,0 +1,100 @@
+.about
+  margin-top 30px
+
+  &__about-company
+    &_column_wrapper
+      background-color #f9fbfc
+      padding 33px 40px 45px
+      position relative
+
+    &_image-column,
+    &_description-column
+      float left
+      padding 2px
+
+    &_image-column
+      min-height 450px
+      position relative
+      padding-left 0
+      width (100 - (100 / 3))%
+
+      & img
+        height 100%
+        left -999px
+        margin 0 auto
+        min-width 100%
+        min-height 100%
+        position absolute
+        top 0
+        right -999px
+
+      &_title
+        color white
+        font-size 20px
+        font-weight 100
+        line-height 24px
+        position absolute
+        right 35px
+        top 65px
+
+      &_logo
+        bottom 40px
+        position absolute
+        right 40px
+
+    &_image-column &_column_wrapper
+      height 100%
+      overflow hidden
+      width 100%
+
+    &_description-column
+      padding-right 0
+      width (100 / 3)%
+
+    &_description-column &_column_wrapper
+      height 100%
+
+    &_title-large
+      font-size 24px
+      font-weight 100
+      line-height 31px
+      margin-bottom 26px
+
+    &_title-medium
+      font-size 21px
+      font-weight 100
+      line-height 23px
+      margin-bottom 41px
+
+    &_description-text
+      font-size 16px
+      font-weight 100
+      line-height 29px
+
+    &_bottom-item
+      float left
+      padding 2px
+      width (100 / 3)%
+
+      &:first-child
+        padding-left 0
+
+      &:last-child
+        padding-right 0
+
+  &__certificates
+    margin-top 40px
+
+    &_title
+      margin-bottom 40px
+
+    &_item
+      float left
+      padding 0 10px
+      text-align center
+      width (100 / 6)%
+
+      &_image
+        & img
+          height auto
+          max-width 100%

@@ -1,0 +1,296 @@
+mixin slider(options)
+  each item in options
+    .product-info__sliders_wrapper(id='slider-' + item.slider_id active=(item.active) ? true : false)
+      .product-info__slider
+        each slide in item.slides
+          .product-info__slider_item(data-thumb=slide.img)
+            img(src=slide.img)
+
+//- mixin product_info_list__item(items)
+//-   each item in items
+//-     li.product-info-list__item
+//-       span.product-info-list__property!=item.property
+//-       span.product-info-list__value!=item.value
+                
+mixin sizeCheckbox(checkboxes)
+  .product-info__info_sizes_wrapper.clearfix
+    each item in checkboxes
+      .product-info__info_sizes_item
+        label.product-info__info_sizes_label
+          input(type='checkbox' name='size' value=item.name)
+          span.product-info__info_sizes_checkbox= item.name
+            ul.product-info-list
+              li.product-info-list__item
+                span.product-info-list__property!=item.property1
+                span.product-info-list__value!=item.value1
+              li.product-info-list__item
+                span.product-info-list__property!=item.property2
+                span.product-info-list__value!=item.value2
+              li.product-info-list__item
+                span.product-info-list__property!=item.property3
+                span.product-info-list__value!=item.value3
+              li.product-info-list__item
+                span.product-info-list__property!=item.property4
+                span.product-info-list__value!=item.value4
+              li.product-info-list__item
+                span.product-info-list__property!=item.property5
+                span.product-info-list__value!=item.value5
+              li.product-info-list__item
+                span.product-info-list__property!=item.property6
+                span.product-info-list__value!=item.value6
+              li.product-info-list__item
+                span.product-info-list__property!=item.property7
+                span.product-info-list__value!=item.value7
+              li.product-info-list__item
+                span.product-info-list__property!=item.property8
+                span.product-info-list__value!=item.value8
+              //- +product_info_list__item([{
+              //-   property: 'Размер:',
+              //-   value: '50'
+              //- }])
+
+        input.product-info__info_sizes_input(type='text' name='count' value="0")
+
+
+mixin product-info()
+  .product-info.clearfix
+    .product-info__sliders
+      .product-info__sliders_top-buttons
+        // Если товар добавлен в избранное, то вместо класса 'icons__like'
+        // нужно ставить 'icons__like-active'
+        // самой кнопке нужно добавлять класс 'favorite-product'
+        button.product-info__sliders_like(type='button')
+          .icons.icons__like
+        button.product-info__sliders_print(type='button' print='.product-info')
+          .icons.icons__print
+      +slider([{
+        slider_id: 1,
+        active: true,
+        slides: [{
+          img: 'uploads/img_57.jpg'
+        }, {
+          img: 'uploads/img_51.jpg'
+        }, {
+          img: 'uploads/img_52.jpg'
+        }, {
+          img: 'uploads/img_53.jpg'
+        }]
+      }, {
+        slider_id: 2,
+        slides: [{
+          img: 'uploads/img_54.jpg'
+        }, {
+          img: 'uploads/img_51.jpg'
+        }, {
+          img: 'uploads/img_52.jpg'
+        }, {
+          img: 'uploads/img_53.jpg'
+        }]
+      }, {
+        slider_id: 3,
+        slides: [{
+          img: 'uploads/img_55.jpg'
+        }, {
+          img: 'uploads/img_51.jpg'
+        }, {
+          img: 'uploads/img_52.jpg'
+        }, {
+          img: 'uploads/img_53.jpg'
+        }]
+      }, {
+        slider_id: 4,
+        slides: [{
+          img: 'uploads/img_56.jpg'
+        }, {
+          img: 'uploads/img_51.jpg'
+        }, {
+          img: 'uploads/img_52.jpg'
+        }, {
+          img: 'uploads/img_53.jpg'
+        }]
+      }])
+    form.product-info__info(action='?' method='POST')
+      .product-info__info_title
+        | Mario Machardi
+        br
+        | Slim Fit, Non Iron, Воротник Кент, Длинный рукав
+      .product-info__info_article
+        | Артикул: CL337KOM, Состав: 100% хлопок
+      .product-info__info_price
+        .product-info__info_price_old
+          | 3990
+          span.rub q
+        .product-info__info_price_new
+          | 2990
+          span.rub q
+        //| 3990
+        //span.rub q
+      .product-info__info_more-info
+        a(href='#more-info-product'): b Подробнее
+      .product-info__info_color
+        .product-info__info_label
+          | Цвет:
+        .product-info__info_color_wrapper
+          a.product-info__info_color_item.product-info__info_color_item_active(href='#slider-1' slider-active)
+            img(src='uploads/img_50.jpg')
+          a.product-info__info_color_item(href='#slider-2' slider-active)
+            img(src='uploads/img_54.jpg')
+          a.product-info__info_color_item(href='#slider-3' slider-active)
+            img(src='uploads/img_55.jpg')
+          a.product-info__info_color_item(href='#slider-4' slider-active)
+            img(src='uploads/img_56.jpg')
+      .product-info__info_grids
+        .product-info__info_grids_select-wrapper
+          .product-info__info_label
+            | Сетка:
+          select.product-info__select(data-placeholder='Сетка')
+            option(value='')
+            option(value='SF1-12') SF1-12
+            option(value='SF1-11') SF1-11
+            option(value='SF1-10') SF1-10
+        .product-info__info_grids_input-wrapper
+          .product-info__info_label
+            | Кол-во:
+          span.input-number-decrement
+          input.product-info__info_grids_input.input-number(type='text' name='count' value='1' min='0')
+          span.input-number-increment
+          
+        a.product-info__info_grids_size-guide(href='#tabel-size-guide')
+          .icons.icons__size-guide-small
+          span
+            | Гид по сеткам
+            br
+            | и размерам
+      .product-info__info_sizes
+        .product-info__info_label
+          | Размер:
+        +sizeCheckbox([{
+          name: 'XS',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }, {
+          name: 'S',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }, {
+          name: 'L',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }, {
+          name: 'M',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }, {
+          name: 'XL',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }, {
+          name: '2XL',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }, {
+          name: '3XL',
+          property1: 'Размер:',
+          value1: '50',
+          property2: 'Рост, см:',
+          value2: '176-182',
+          property3: 'Обхват шеи:',
+          value3: '40',
+          property4: 'Обхват груди, см:',
+          value4: '116',
+          property5: 'Обхват талии, см:',
+          value5: '105',
+          property6: 'Длина рукава:',
+          value6: '68,5',
+          property7: 'Длина изделия:',
+          value7: '81',
+          property8: 'Ширина подола:',
+          value8: '111'
+        }])
+      .product-info__info_add-basket
+        button.btn.btn_theme_black.btn_size_m(type='button' data-popup="#add-basket")
+          | В корзину
