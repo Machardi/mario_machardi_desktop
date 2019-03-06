@@ -3,12 +3,6 @@
 
 ## Старт проекта
 
-* Клонирование репозитория и переход в папку проекта:
-
-```
-git clone git@github.com:sinkill/pr-template.git new-project && cd new-project
-```
-
 * Установка модулей:
 
 ```
