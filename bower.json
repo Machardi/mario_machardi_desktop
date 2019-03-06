@@ -8,7 +8,7 @@
     "event-shim.js": "latest",
     "html5shiv": "latest",
     "css3-mediaqueries-js": "latest",
-    "jquery": "^2.2.3",
+    "jquery": "^3.3.1",
     "bootstrap": "^3.3.6",
     "jquery-form-validator": "^2.3.26",
     "slick-carousel": "^1.6.0",
